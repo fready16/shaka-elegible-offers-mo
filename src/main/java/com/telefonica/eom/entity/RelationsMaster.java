@@ -21,7 +21,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "RELATIONS_MASTER")
+@Table(name = "RELATIONS_MASTER", schema = "RE_DATA")
 public class RelationsMaster implements Serializable {
 
     /**

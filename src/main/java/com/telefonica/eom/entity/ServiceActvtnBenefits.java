@@ -21,7 +21,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "SERVICE_ACTVTN_BENEFITS")
+@Table(name = "SERVICE_ACTVTN_BENEFITS", schema = "RE_DATA")
 public class ServiceActvtnBenefits {
     
     @Id

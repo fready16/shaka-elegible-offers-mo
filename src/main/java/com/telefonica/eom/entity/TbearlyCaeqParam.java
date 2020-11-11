@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "TBEARLY_CAEQ_PARAM")
+@Table(name = "TBEARLY_CAEQ_PARAM", schema = "RE_DATA")
 public class TbearlyCaeqParam implements Serializable {
     
     private static final long serialVersionUID = 1L;

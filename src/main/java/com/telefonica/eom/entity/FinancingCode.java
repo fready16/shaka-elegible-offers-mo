@@ -19,7 +19,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "FINANCING_CODE")
+@Table(name = "FINANCING_CODE", schema = "RE_DATA")
 public class FinancingCode {
 
     @Id

@@ -3,7 +3,6 @@ package com.telefonica.eom.service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -186,29 +185,23 @@ public class ResponseFiller {
 	*/
 	private ComponentProdOfferPriceType getProductOfferingPrice(PlanBODetailsType pBOdt) {
 		
-		PriceDetailsType pdt1 = pBOdt.getPriceDetails().stream()
-				.filter(pdt -> Util.enumEquivalence(
-					pdt.getPriceType()).toString().equals(PriceTypeEnum.RECURRING.toString()))
-				.findAny()
-				.orElse(new PriceDetailsType());
+		PriceDetailsType pdt1 = getPriceDetails(pBOdt);
 		
 		ComponentProdOfferPriceType cpopt = new ComponentProdOfferPriceType();
 		cpopt.setId(pBOdt.getBillingOfferId()); 
 		cpopt.setCode(pBOdt.getBillingOfferCode()); 
 		cpopt.setName(pBOdt.getBillingOfferName());
-		cpopt.setProductSpecContainmentID(pBOdt.getProductSpecContainmentID());
-		cpopt.setPricePlanSpecContainmentID(pBOdt.getPricePlanSpecContainmentID());
 		cpopt.setDescription(Constant.OFFER_PRICE_DESCRIPTION);
-		cpopt.setPriceType(Util.enumEquivalence(pdt1.getPriceType())); 
-		cpopt.setPrice(rsff.getMoney(pdt1.getPrice()));
-		cpopt.setMinPrice(rsff.getMoney(pdt1.getMinPrice()));
-		cpopt.setMaxPrice(rsff.getMoney(pdt1.getMaxPrice()));
-		cpopt.setTaxAmount(rsff.getMoneyWithTax(pdt1.getOriginalAmount().getAmount()));
-		cpopt.setOriginalAmount(rsff.getMoney(pdt1.getOriginalAmount()));
+		cpopt.setPriceType(Util.enumEquivalence(pdt1.getPriceType()));
+		cpopt.setPrice(rsff.getPrice(pdt1.getOriginalAmount(), pdt1.getPrice()));
+		cpopt.setPriceWithTax(rsff.getPriceWithTax(pdt1.getOriginalAmount()));
+		cpopt.setOriginalAmount(rsff.getOriginalAmount(pdt1.getOriginalAmount()));
+		cpopt.setOriginalTaxAmount(rsff.getPriceWithTax(pdt1.getOriginalAmount()));	
 		cpopt.setPricedComponents(this.getPricedComponents(pBOdt.getBillingOfferId()));
-		cpopt.setAdditionalData(rsff.getAditionalDataPOP(pBOdt.getPlanInfo()));
 		cpopt.setBenefits(benefits.benefistsList(meor, businessRef, catalogItemCode,
-			catalogItemId, pBOdt.getBillingOfferCode()));
+				catalogItemId, pBOdt.getBillingOfferCode()));
+		cpopt.setAdditionalData(rsff.getAditionalDataPOP(pBOdt.getPlanInfo()));
+
 		
 		return cpopt;
 	}
@@ -250,11 +243,27 @@ public class ResponseFiller {
 	    return dpi;
 	}
 	
+	/**
+	 * Obtiene el productOfferingProductSpecID de children
+	 * @param offerType
+	 * @return
+	 */
 	private String getProductOfferingProductSpecID (OfferingTypeOfferType offerType) {
 		if(!offerType.getChildren().isEmpty()) {
 		 	return offerType.getChildren().get(0).getProductOfferingProductSpecID();
 		}
 		return null;
+	}
+	
+	/**
+	 * Obtiene solo los priceDetails Recurrentes
+	 * @param pBOdt
+	 * @return
+	 */
+	private PriceDetailsType getPriceDetails(PlanBODetailsType pBOdt) {
+		return pBOdt.getPriceDetails().stream().filter(
+				pdt -> Util.enumEquivalence(pdt.getPriceType()).toString().equals(PriceTypeEnum.RECURRING.toString()))
+				.findAny().orElse(new PriceDetailsType());
 	}
 	
 }

@@ -19,7 +19,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "MASTER_OF_BO_INFO")
+@Table(name = "MASTER_OF_BO_INFO", schema = "RE_DATA")
 public class MasterOfBoInfo {
     
     @Id

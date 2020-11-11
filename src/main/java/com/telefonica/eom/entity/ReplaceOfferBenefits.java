@@ -22,7 +22,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "REPLACE_OFFER_BENEFITS")
+@Table(name = "REPLACE_OFFER_BENEFITS", schema = "RE_DATA")
 public class ReplaceOfferBenefits implements Serializable{
     
     private static final long serialVersionUID = 1L;

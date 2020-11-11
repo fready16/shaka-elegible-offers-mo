@@ -22,7 +22,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "PORTABILITY_BENEFITS")
+@Table(name = "PORTABILITY_BENEFITS", schema = "RE_DATA")
 public class PortabilityBenefits implements Serializable {
 
     /**

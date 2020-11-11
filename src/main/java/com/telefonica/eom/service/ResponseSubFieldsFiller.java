@@ -1,9 +1,9 @@
 package com.telefonica.eom.service;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -104,23 +104,24 @@ public class ResponseSubFieldsFiller {
 	 * @param UNIMoneyType
 	 * @return MoneyType
 	 */
-	public MoneyType getMoney(UNIMoneyType umt) {
+	public MoneyType getOriginalAmount(UNIMoneyType umt) {
 		MoneyType mt = new MoneyType();
-		mt.setUnits(umt.getUnits().isEmpty() ? "PEN" : umt.getUnits());
+		mt.setUnits((umt.getUnits().isEmpty() || Objects.isNull(umt.getUnits())) ? "PEN" : umt.getUnits());
 		mt.setAmount(umt.getAmount());
 		return mt;
 	}
-
-	/**
-	 * Metodo que retorna un objeto MoneyType con el calculo de IGV
-	 * 
-	 * @param UNIMoneyType
-	 * @return MoneyType
-	 */
-	public MoneyType getMoneyWithTax(BigDecimal umt) {
+	
+	public MoneyType getPrice(UNIMoneyType originalAmount, UNIMoneyType price) {
 		MoneyType mt = new MoneyType();
-		mt.setUnits("PEN");
-		mt.setAmount(Util.igvCalculator(umt));
+		mt.setUnits((price.getUnits().isEmpty() || Objects.isNull(price.getUnits())) ? "PEN" : price.getUnits());
+		mt.setAmount(originalAmount.getAmount());
+		return mt;
+	}
+	
+	public MoneyType getPriceWithTax(UNIMoneyType umt) {
+		MoneyType mt = new MoneyType();
+		mt.setUnits((umt.getUnits().isEmpty() || Objects.isNull(umt.getUnits())) ? "PEN" : umt.getUnits());
+		mt.setAmount(Util.igvCalculator(umt.getAmount()));
 		return mt;
 	}
 

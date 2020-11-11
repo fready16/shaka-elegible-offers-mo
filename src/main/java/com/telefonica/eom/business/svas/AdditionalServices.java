@@ -61,11 +61,12 @@ public class AdditionalServices {
     public List<RelationsAdditionalServices> getSVAS(MobileElegibleOffersRequest meor, List<OffersProperties> offersValues) {
 	
 	this.offersValues = offersValues;
+	
 	return additionalService.getRelations(meor, this.getAdditionalComponents(
 		Util.fromBoolToYN(meor.getIsRetention()), meor.getAction()))
 	.stream()
 	.filter(this::pvCondition)
-	.collect(Collectors.toList());
+	.collect(Collectors.toList());	
     }
 
     /**

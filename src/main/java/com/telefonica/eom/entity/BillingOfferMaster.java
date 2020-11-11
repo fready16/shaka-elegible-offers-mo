@@ -23,7 +23,7 @@ import lombok.Data;
 */
 @Data
 @Entity
-@Table(name = "BILLING_OFFER_MASTER")
+@Table(name = "BILLING_OFFER_MASTER", schema = "RE_DATA")
 public class BillingOfferMaster implements Serializable{
     
     /**
