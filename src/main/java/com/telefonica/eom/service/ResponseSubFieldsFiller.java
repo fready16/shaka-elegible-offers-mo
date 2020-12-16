@@ -3,11 +3,11 @@ package com.telefonica.eom.service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
+import com.telefonica.eom.commons.Constant;
 import com.telefonica.eom.commons.Util;
 import com.telefonica.eom.enums.ADataEnum;
 import com.telefonica.eom.generated.model.CategoryTreeType;
@@ -105,23 +105,32 @@ public class ResponseSubFieldsFiller {
 	 * @return MoneyType
 	 */
 	public MoneyType getOriginalAmount(UNIMoneyType umt) {
+
 		MoneyType mt = new MoneyType();
-		mt.setUnits((umt.getUnits().isEmpty() || Objects.isNull(umt.getUnits())) ? "PEN" : umt.getUnits());
+		mt.setUnits((umt.getUnits() == null || umt.getUnits().isEmpty()) 
+		    ? Constant.PERUVIAN_COIN : umt.getUnits());
 		mt.setAmount(umt.getAmount());
+
 		return mt;
 	}
-	
+
 	public MoneyType getPrice(UNIMoneyType originalAmount, UNIMoneyType price) {
+
 		MoneyType mt = new MoneyType();
-		mt.setUnits((price.getUnits().isEmpty() || Objects.isNull(price.getUnits())) ? "PEN" : price.getUnits());
+		mt.setUnits((price.getUnits() == null || price.getUnits().isEmpty()) 
+		    ? Constant.PERUVIAN_COIN : price.getUnits());
 		mt.setAmount(originalAmount.getAmount());
+
 		return mt;
 	}
-	
+
 	public MoneyType getPriceWithTax(UNIMoneyType umt) {
+
 		MoneyType mt = new MoneyType();
-		mt.setUnits((umt.getUnits().isEmpty() || Objects.isNull(umt.getUnits())) ? "PEN" : umt.getUnits());
+		mt.setUnits((umt.getUnits() == null || umt.getUnits().isEmpty()) 
+		    ? Constant.PERUVIAN_COIN : umt.getUnits());
 		mt.setAmount(Util.igvCalculator(umt.getAmount()));
+
 		return mt;
 	}
 

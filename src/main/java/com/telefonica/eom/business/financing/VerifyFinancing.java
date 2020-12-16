@@ -46,11 +46,11 @@ public class VerifyFinancing {
      */
     public String validate(MobileElegibleOffersRequest meor) {
 
-	if (!this.financingPlan(meor)) {
-	    return Constant.YES;
-	} else {
-	    return Constant.NO;
-	}
+        if (!financingPlan(meor)) {
+            return Constant.YES;
+        } else {
+            return Constant.NO;
+        }
     }
 
     /**
@@ -61,23 +61,27 @@ public class VerifyFinancing {
      */
     private boolean financingPlan(MobileElegibleOffersRequest meor) {
 
-	List<String> fpcList = this.planValidation(meor);
-	String creditScore = Character.toString(Integer.toString(meor.getCreditScore()).charAt(3));
-	String action = this.getAction(meor.getAction(), meor.getIsPortability());
+        List<String> fpcList = this.planValidation(meor);
+    	String creditScore = Character.toString(Integer.toString(meor.getCreditScore()).charAt(3));
+    	String action = this.getAction(meor.getAction(), meor.getIsPortability());
 
-	List<FinancingElegibility> feList = financingElegibilityRepo.findAll().stream()
-		.filter(fe -> financingFilters.financingPlan(fe, fpcList)).filter(fe -> financingFilters.riskLevel(fe, creditScore))
-		.filter(fe -> financingFilters.customerType(fe, meor.getCustomer().getCustomerSegment()))
-		.filter(fe -> financingFilters.customerSubType(fe, meor.getCustomer().getCustomerSubsegment()))
-		.filter(fe -> financingFilters.flowName(fe, action)).collect(Collectors.toList());
+    	List<FinancingElegibility> feList = financingElegibilityRepo.findAll().stream()
+    		.filter(fe -> financingFilters.financingPlan(fe, fpcList))
+    		.filter(fe -> financingFilters.riskLevel(fe, creditScore))
+    		.filter(fe -> financingFilters.customerType(fe, meor.getCustomer().getCustomerSegment()))
+    		.filter(fe -> financingFilters.customerSubType(fe, meor.getCustomer().getCustomerSubsegment()))
+    		.filter(fe -> financingFilters.flowName(fe, action))
+    		.collect(Collectors.toList());
 
-	if (feList.isEmpty()) {
-	    return true;
-	} else {
-	    return feList.stream().map(FinancingElegibility::getFinancingPlan).filter(Objects::nonNull).collect(Collectors.toList())
-		    .isEmpty();
-	}
-
+    	if (feList.isEmpty()) {
+    	    return true;
+    	} else {
+    	    return feList.stream()
+    	        .map(FinancingElegibility::getFinancingPlan)
+    	        .filter(Objects::nonNull)
+    	        .collect(Collectors.toList())
+    	        .isEmpty();
+    	}
     }
 
     /**
@@ -88,15 +92,17 @@ public class VerifyFinancing {
      */
     private String getAction(String action, boolean isPortability) {
 
-	if (Constant.PROVIDE.equals(action) && isPortability) {
-	    return Constant.PORTABILITY;
-	} else if (Constant.PROVIDE.equals(action) && !isPortability) {
-	    return Constant.ALTA;
-	} else if (!Constant.PROVIDE.equals(action)) {
-	    return Constant.DEVICE_CHANGE;
-	} else {
-	    return Constant.VOID_STRING;
-	}
+        String actionResult = Constant.VOID_STRING;
+
+        if (Constant.PROVIDE.equals(action) && isPortability) {
+            actionResult = Constant.PORTABILITY;
+        } else if (Constant.PROVIDE.equals(action) && !isPortability) {
+            actionResult = Constant.ALTA;
+        } else if (!Constant.PROVIDE.equals(action)) {
+            actionResult = Constant.DEVICE_CHANGE;
+        }
+
+        return actionResult;
     }
 
     /**
@@ -107,20 +113,24 @@ public class VerifyFinancing {
      */
     private List<String> planValidation(MobileElegibleOffersRequest meor) {
 
-	List<FinancingCode> fcList = financingCodeRepo.findAll().stream()
-		.filter(fc -> financingFilters.subType(fc, meor.getCustomer().getCustomerSegment()))
-		.filter(financingFilters::financingElegibilityInd).collect(Collectors.toList());
+        List<FinancingCode> fcList = financingCodeRepo.findAll().stream()
+            .filter(fc -> financingFilters.subType(fc, meor.getCustomer().getCustomerSegment()))
+            .filter(financingFilters::financingElegibilityInd)
+            .collect(Collectors.toList());
 
-	Predicate<FinancingCode> corporatePredicate;
+        Predicate<FinancingCode> corporatePredicate;
 
-	if (Constant.RESIDENTIAL.equals(meor.getCustomer().getCustomerSegment())) {
-	    corporatePredicate = financingFilters::isNotCorporate;
-	} else {
-	    corporatePredicate = financingFilters::isCorporate;
-	}
+        if (Constant.RESIDENTIAL.equals(meor.getCustomer().getCustomerSegment())) {
+            corporatePredicate = financingFilters::isNotCorporate;
+        } else {
+            corporatePredicate = financingFilters::isCorporate;
+        }
 
-	return fcList.stream().filter(corporatePredicate).filter(financingFilters::hasFWA).map(FinancingCode::getFinancialPlanCode)
-		.collect(Collectors.toList());
+        return fcList.stream()
+            .filter(corporatePredicate)
+            .filter(financingFilters::hasFWA)
+            .map(FinancingCode::getFinancialPlanCode)
+            .collect(Collectors.toList());
     }
 
 }

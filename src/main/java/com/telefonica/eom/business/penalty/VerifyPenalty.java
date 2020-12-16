@@ -37,7 +37,7 @@ public class VerifyPenalty {
 		
 		String planRank = null;
 	    
-	    if(Double.valueOf(devicePenaltyInfo.getPenaltyAmountWithTax()) >= 0) {
+	    if(devicePenaltyInfo.getPenaltyAmountWithTax()!=null && Double.valueOf(devicePenaltyInfo.getPenaltyAmountWithTax()) >= 0) {
 		
 		Optional<PropertyInBillingOffer> piboOptional = businessRef.getPenaltyPropertyInBillingOfferList().stream()
 			.filter(pibo -> productOfferingPriceId.equals(pibo.getCidBo()))

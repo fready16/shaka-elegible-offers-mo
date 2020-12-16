@@ -27,10 +27,13 @@ public class FinancingFilters {
      * @return boolean
      */
     public boolean subType (FinancingCode fc, String customerSubsegment) {
-	if (customerSubsegment == null) {
-	    return true;
-	}
-	return customerSubsegment.equalsIgnoreCase(fc.getSubType()) || Constant.ASTERISK.equals(fc.getSubType());
+
+        if (customerSubsegment == null) {
+    	    return true;
+    	}
+
+        return customerSubsegment.equalsIgnoreCase(fc.getSubType()) 
+    	    || Constant.ASTERISK.equals(fc.getSubType());
     }
     
     /**
@@ -101,7 +104,8 @@ public class FinancingFilters {
      * @return boolean
      */  
     public boolean customerType(FinancingElegibility fe, String customeSegment) {
-    	return customeSegment.equals(fe.getCustomerType()) || Constant.ASTERISK.equals(fe.getCustomerType());
+    	return fe.getCustomerType().equals(customeSegment) 
+    	    || Constant.ASTERISK.equals(fe.getCustomerType());
     }
     
     /**
@@ -111,7 +115,8 @@ public class FinancingFilters {
      * @return boolean
      */    
     public boolean customerSubType(FinancingElegibility fe, String customeSubsegment) {
-    	return customeSubsegment.equals(fe.getCustomeSubtype()) || Constant.ASTERISK.equals(fe.getCustomeSubtype());
+    	return fe.getCustomeSubtype().equals(customeSubsegment) 
+    	    || Constant.ASTERISK.equals(fe.getCustomeSubtype());
     }
 
     /**

@@ -1,6 +1,7 @@
 package com.telefonica.eom.commons;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,7 +12,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import com.telefonica.eom.commons.Constant;
+
 import com.telefonica.eom.generated.model.ComponentProdOfferPriceType.PriceTypeEnum;
 import com.telefonica.globalintegration.services.retrieveofferings.v1.PriceTypeProdAltType;
 
@@ -27,6 +28,8 @@ import com.telefonica.globalintegration.services.retrieveofferings.v1.PriceTypeP
 */
 public class Util {
 
+    private Util() {}
+
     /**
      * Metodo que retorna true|false de acuerdo a condicion.
      * 
@@ -34,7 +37,7 @@ public class Util {
      * @return String
      */
     public static String fromBoolToYN(boolean cond) {
-	return cond ? Constant.YES : Constant.NO;
+        return cond ? Constant.YES : Constant.NO;
     }
 
     /**
@@ -44,11 +47,14 @@ public class Util {
      * @return LocalDate
      */
     public static LocalDate parseDate(String dateString) {
-	LocalDate localDAte = null;
-	if (dateString.contains("T")) {
-	    localDAte = LocalDate.parse(Arrays.asList(dateString.split("T")).get(0));
-	}
-	return localDAte;
+
+        LocalDate localDAte = null;
+
+        if (dateString.contains("T")) {
+            localDAte = LocalDate.parse(Arrays.asList(dateString.split("T")).get(0));
+        }
+
+        return localDAte;
     }
 
     /**
@@ -61,7 +67,7 @@ public class Util {
      * @return lista de cadena dividida ;
      */
     public static List<String> getListSplit(String data, String separator) {
-	return Arrays.asList(data.split(separator));
+        return Arrays.asList(data.split(separator));
     }
 
     /**
@@ -70,9 +76,11 @@ public class Util {
      * @return Fecha actual en formato gregoriano.
      */
     public static GregorianCalendar getGCalendar() {
-	GregorianCalendar gCalendar = new GregorianCalendar();
-	gCalendar.setTime(new Date());
-	return gCalendar;
+
+        GregorianCalendar gCalendar = new GregorianCalendar();
+        gCalendar.setTime(new Date());
+
+        return gCalendar;
     }
 
     /**
@@ -82,8 +90,7 @@ public class Util {
      * @return Long
      */
     public static Long getMonthsPeriod(LocalDate localDate) {
-	LocalDate localDatenow = LocalDate.now();
-	return ChronoUnit.MONTHS.between(localDate, localDatenow);
+        return ChronoUnit.MONTHS.between(localDate, LocalDate.now());
     }
 
     /**
@@ -93,12 +100,15 @@ public class Util {
      * @return Long
      */
     public static Long getDaysPeriod(XMLGregorianCalendar xmlGC) {
-	LocalDate localDatenow = LocalDate.now();
-	LocalDate localDate = LocalDate.of(xmlGC.getYear(), xmlGC.getMonth(), xmlGC.getDay());
-	if (localDate.compareTo(localDatenow) >= 0) {
-	    return (long) 0;
-	}
-	return ChronoUnit.DAYS.between(localDate, localDatenow);
+
+        LocalDate localDatenow = LocalDate.now();
+        LocalDate localDate = LocalDate.of(xmlGC.getYear(), xmlGC.getMonth(), xmlGC.getDay());
+
+        if (localDate.compareTo(localDatenow) >= 0) {
+            return (long) 0;
+        }
+
+        return ChronoUnit.DAYS.between(localDate, localDatenow);
     }
 
     /**
@@ -109,13 +119,16 @@ public class Util {
      */
     public static PriceTypeEnum enumEquivalence(PriceTypeProdAltType ptpatEnum) {
 
-	for (PriceTypeEnum b : PriceTypeEnum.values()) {
-	    if (b.toString().substring(0, 5).equals(ptpatEnum.value().substring(0, 5))) {
-		return b;
-	    }
-	}
-	return null;
+        for (PriceTypeEnum b : PriceTypeEnum.values()) {
+            if (b.toString().substring(0, 5).equals(ptpatEnum.value().substring(0, 5))) {
+                return b;
+            }
+        }
+
+        return null;
     }
+
+    private static final BigDecimal IGV = BigDecimal.valueOf(1 + Constant.IGV);
 
     /**
      * Metodo que retorna el monto enviado mas IGV
@@ -124,14 +137,14 @@ public class Util {
      * @return BigDecimal
      */
     public static BigDecimal igvCalculator(BigDecimal amount) {
-
-	BigDecimal igv = BigDecimal.valueOf(Constant.IGV);
-	return amount.multiply(igv).add(amount);
+        return amount.multiply(IGV).setScale(2, RoundingMode.HALF_UP);
     }
 
     public static String getTracking() {
-	return Thread.currentThread().getName();
+        return Thread.currentThread().getName();
     }
+
+    private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ofPattern(Constant.DATE_TIME);
 
     /**
      * Método de formato de fecha y hora utilizado en la clase LoggingAspect.
@@ -139,9 +152,6 @@ public class Util {
      * @return date
      */
     public static String getDateTimeFormatter() {
-	DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(Constant.DATE_TIME);
-	LocalDateTime localDateTime = LocalDateTime.now();
-	String date = dateTimeFormatter.format(localDateTime);
-	return date;
+        return DATETIME_FORMATTER.format(LocalDateTime.now());
     }
 }
