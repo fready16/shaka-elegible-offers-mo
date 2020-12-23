@@ -2,28 +2,21 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.telefonica.eom.generated.model.MoneyType;
 import com.telefonica.eom.generated.model.TimePeriodType;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * PenaltyType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class PenaltyType   {
+public class PenaltyType  implements Serializable {
   @JsonProperty("id")
   private String id = null;
 
@@ -43,21 +36,18 @@ public class PenaltyType   {
   private MoneyType penaltyValue = null;
 
   @JsonProperty("additionalData")
-  @Valid
-  private List<MoneyType> additionalData = null;
+  private List<MoneyType> additionalData = new ArrayList<MoneyType>();
 
   public PenaltyType id(String id) {
     this.id = id;
     return this;
   }
 
-  /**
+   /**
    * A unique identifier for the penalty model
    * @return id
   **/
   @ApiModelProperty(value = "A unique identifier for the penalty model")
-
-
   public String getId() {
     return id;
   }
@@ -71,14 +61,12 @@ public class PenaltyType   {
     return this;
   }
 
-  /**
+   /**
    * A human readable penalty model name
    * @return name
   **/
   @ApiModelProperty(required = true, value = "A human readable penalty model name")
   @NotNull
-
-
   public String getName() {
     return name;
   }
@@ -92,13 +80,11 @@ public class PenaltyType   {
     return this;
   }
 
-  /**
+   /**
    * A human readable penalty short description
    * @return description
   **/
   @ApiModelProperty(value = "A human readable penalty short description")
-
-
   public String getDescription() {
     return description;
   }
@@ -112,14 +98,11 @@ public class PenaltyType   {
     return this;
   }
 
-  /**
+   /**
    * The validity for the penalty model in the catalog. If not included, the current date is used as starting date and no ending date is defined
    * @return validFor
   **/
   @ApiModelProperty(value = "The validity for the penalty model in the catalog. If not included, the current date is used as starting date and no ending date is defined")
-
-  @Valid
-
   public TimePeriodType getValidFor() {
     return validFor;
   }
@@ -133,14 +116,12 @@ public class PenaltyType   {
     return this;
   }
 
-  /**
+   /**
    * Text describing the condition that triggers the penalty application
    * @return condition
   **/
   @ApiModelProperty(required = true, value = "Text describing the condition that triggers the penalty application")
   @NotNull
-
-
   public String getCondition() {
     return condition;
   }
@@ -154,15 +135,12 @@ public class PenaltyType   {
     return this;
   }
 
-  /**
+   /**
    * Monetary value of the penalty
    * @return penaltyValue
   **/
   @ApiModelProperty(required = true, value = "Monetary value of the penalty")
   @NotNull
-
-  @Valid
-
   public MoneyType getPenaltyValue() {
     return penaltyValue;
   }
@@ -177,21 +155,15 @@ public class PenaltyType   {
   }
 
   public PenaltyType addAdditionalDataItem(MoneyType additionalDataItem) {
-    if (this.additionalData == null) {
-      this.additionalData = new ArrayList<MoneyType>();
-    }
     this.additionalData.add(additionalDataItem);
     return this;
   }
 
-  /**
+   /**
    * Any additional metadata that may be needed to define the entity (implementation and application specific). It is recommended not to make use of this information element, this extension capability will be removed from UNICA design guidelines
    * @return additionalData
   **/
   @ApiModelProperty(value = "Any additional metadata that may be needed to define the entity (implementation and application specific). It is recommended not to make use of this information element, this extension capability will be removed from UNICA design guidelines")
-
-  @Valid
-
   public List<MoneyType> getAdditionalData() {
     return additionalData;
   }

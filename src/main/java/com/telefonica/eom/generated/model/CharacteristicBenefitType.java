@@ -5,20 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * CharacteristicBenefitType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class CharacteristicBenefitType   {
+public class CharacteristicBenefitType  implements Serializable {
   @JsonProperty("key")
   private String key = null;
 
@@ -30,13 +24,11 @@ public class CharacteristicBenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es la clave de la caracteristica
    * @return key
   **/
   @ApiModelProperty(value = "Es la clave de la caracteristica")
-
-
   public String getKey() {
     return key;
   }
@@ -50,13 +42,11 @@ public class CharacteristicBenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es el valor de clave
    * @return value
   **/
   @ApiModelProperty(value = "Es el valor de clave")
-
-
   public String getValue() {
     return value;
   }

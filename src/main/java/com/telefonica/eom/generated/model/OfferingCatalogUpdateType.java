@@ -2,32 +2,24 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.telefonica.eom.generated.model.OfferingType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.telefonica.eom.generated.model.OfferingType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * OfferingCatalogUpdateType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class OfferingCatalogUpdateType   {
+public class OfferingCatalogUpdateType  implements Serializable {
   @JsonProperty("isIncremental")
   private Boolean isIncremental = null;
 
   @JsonProperty("offerings")
-  @Valid
   private List<OfferingType> offerings = new ArrayList<OfferingType>();
 
   public OfferingCatalogUpdateType isIncremental(Boolean isIncremental) {
@@ -35,15 +27,13 @@ public class OfferingCatalogUpdateType   {
     return this;
   }
 
-  /**
+   /**
    * Indicates whether the provided list of product offerings is Incremental (true) or Total (false). Incremental means that the list of product offerings in the request message includes the modification of currently stored offerings in the catalog or new offerings to be added. Total means that the list of offerings in the request message provides the new whole list of offerings that substitutes completely the existing catalog
    * @return isIncremental
   **/
   @ApiModelProperty(required = true, value = "Indicates whether the provided list of product offerings is Incremental (true) or Total (false). Incremental means that the list of product offerings in the request message includes the modification of currently stored offerings in the catalog or new offerings to be added. Total means that the list of offerings in the request message provides the new whole list of offerings that substitutes completely the existing catalog")
   @NotNull
-
-
-  public Boolean isIsIncremental() {
+  public Boolean getIsIncremental() {
     return isIncremental;
   }
 
@@ -61,15 +51,12 @@ public class OfferingCatalogUpdateType   {
     return this;
   }
 
-  /**
+   /**
    * List of offerings (single or bundled) offered by the server
    * @return offerings
   **/
   @ApiModelProperty(required = true, value = "List of offerings (single or bundled) offered by the server")
   @NotNull
-
-  @Valid
-
   public List<OfferingType> getOfferings() {
     return offerings;
   }

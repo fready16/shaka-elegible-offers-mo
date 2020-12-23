@@ -6,21 +6,15 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * Representation of a monetary value
  */
 @ApiModel(description = "Representation of a monetary value")
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class MoneyType   {
+public class MoneyType  implements Serializable {
   @JsonProperty("amount")
   private BigDecimal amount = null;
 
@@ -32,15 +26,12 @@ public class MoneyType   {
     return this;
   }
 
-  /**
+   /**
    * Amount of money. Notice that in the TMForum API version 14.5 this parameter is named taxIncludedAmount and is not meeting SID definition
    * @return amount
   **/
   @ApiModelProperty(required = true, value = "Amount of money. Notice that in the TMForum API version 14.5 this parameter is named taxIncludedAmount and is not meeting SID definition")
   @NotNull
-
-  @Valid
-
   public BigDecimal getAmount() {
     return amount;
   }
@@ -54,14 +45,12 @@ public class MoneyType   {
     return this;
   }
 
-  /**
+   /**
    * Definition of the currency used. It is implementation specific to define how currencies are defined, it could be defined using ISO 4217. Notice that in the TMForum API version 14.5 this parameter is named currencyCode and is not meeting SID definition
    * @return units
   **/
   @ApiModelProperty(required = true, value = "Definition of the currency used. It is implementation specific to define how currencies are defined, it could be defined using ISO 4217. Notice that in the TMForum API version 14.5 this parameter is named currencyCode and is not meeting SID definition")
   @NotNull
-
-
   public String getUnits() {
     return units;
   }

@@ -6,21 +6,15 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.time.OffsetDateTime;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * Representation of a time period
  */
 @ApiModel(description = "Representation of a time period")
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class TimePeriodType   {
+public class TimePeriodType  implements Serializable {
   @JsonProperty("startDateTime")
   private OffsetDateTime startDateTime = null;
 
@@ -32,15 +26,12 @@ public class TimePeriodType   {
     return this;
   }
 
-  /**
+   /**
    * Start date of the period
    * @return startDateTime
   **/
   @ApiModelProperty(required = true, value = "Start date of the period")
   @NotNull
-
-  @Valid
-
   public OffsetDateTime getStartDateTime() {
     return startDateTime;
   }
@@ -54,14 +45,11 @@ public class TimePeriodType   {
     return this;
   }
 
-  /**
+   /**
    * End date of the period
    * @return endDateTime
   **/
   @ApiModelProperty(value = "End date of the period")
-
-  @Valid
-
   public OffsetDateTime getEndDateTime() {
     return endDateTime;
   }

@@ -5,20 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * ChannelInfoType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class ChannelInfoType   {
+public class ChannelInfoType  implements Serializable {
   @JsonProperty("id")
   private String id = null;
 
@@ -33,14 +27,12 @@ public class ChannelInfoType   {
     return this;
   }
 
-  /**
+   /**
    * An identifier for the channel
    * @return id
   **/
   @ApiModelProperty(required = true, value = "An identifier for the channel")
   @NotNull
-
-
   public String getId() {
     return id;
   }
@@ -54,13 +46,11 @@ public class ChannelInfoType   {
     return this;
   }
 
-  /**
+   /**
    * A resource URI pointing to the resource in the OB that stores the channel detailed information
    * @return href
   **/
   @ApiModelProperty(value = "A resource URI pointing to the resource in the OB that stores the channel detailed information")
-
-
   public String getHref() {
     return href;
   }
@@ -74,13 +64,11 @@ public class ChannelInfoType   {
     return this;
   }
 
-  /**
+   /**
    * A human readable channel name. Defines the channels that can be used for selling the product offering (e.g.: WEB, CRM, SMS, IVR, UE)
    * @return name
   **/
   @ApiModelProperty(value = "A human readable channel name. Defines the channels that can be used for selling the product offering (e.g.: WEB, CRM, SMS, IVR, UE)")
-
-
   public String getName() {
     return name;
   }

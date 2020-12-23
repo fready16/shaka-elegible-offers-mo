@@ -2,25 +2,18 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.telefonica.eom.generated.model.ConnectionType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.telefonica.eom.generated.model.ConnectionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * InternetConnectionCharacteristicType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class InternetConnectionCharacteristicType   {
+public class InternetConnectionCharacteristicType  implements Serializable {
   @JsonProperty("connection")
   private ConnectionType connection = null;
 
@@ -29,15 +22,12 @@ public class InternetConnectionCharacteristicType   {
     return this;
   }
 
-  /**
+   /**
    * Information for broadband/internet type products, providing details on connections characteristics
    * @return connection
   **/
   @ApiModelProperty(required = true, value = "Information for broadband/internet type products, providing details on connections characteristics")
   @NotNull
-
-  @Valid
-
   public ConnectionType getConnection() {
     return connection;
   }

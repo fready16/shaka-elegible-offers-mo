@@ -2,35 +2,26 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.telefonica.eom.generated.model.ComposingProductType;
 import com.telefonica.eom.generated.model.ProductSpecCharacteristicType;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * RefinedProductType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class RefinedProductType   {
+public class RefinedProductType  implements Serializable {
   @JsonProperty("productCharacteristics")
-  @Valid
-  private List<ProductSpecCharacteristicType> productCharacteristics = null;
+  private List<ProductSpecCharacteristicType> productCharacteristics = new ArrayList<ProductSpecCharacteristicType>();
 
   @JsonProperty("subProducts")
-  @Valid
-  private List<ComposingProductType> subProducts = null;
+  private List<ComposingProductType> subProducts = new ArrayList<ComposingProductType>();
 
   public RefinedProductType productCharacteristics(List<ProductSpecCharacteristicType> productCharacteristics) {
     this.productCharacteristics = productCharacteristics;
@@ -38,21 +29,15 @@ public class RefinedProductType   {
   }
 
   public RefinedProductType addProductCharacteristicsItem(ProductSpecCharacteristicType productCharacteristicsItem) {
-    if (this.productCharacteristics == null) {
-      this.productCharacteristics = new ArrayList<ProductSpecCharacteristicType>();
-    }
     this.productCharacteristics.add(productCharacteristicsItem);
     return this;
   }
 
-  /**
+   /**
    * List of specific parameters for the product when included in an specific product Offering that could be configured and/or charged for. This information element can be used as a modifier of a default configuration of a product when incorporated within an specific offering
    * @return productCharacteristics
   **/
   @ApiModelProperty(value = "List of specific parameters for the product when included in an specific product Offering that could be configured and/or charged for. This information element can be used as a modifier of a default configuration of a product when incorporated within an specific offering")
-
-  @Valid
-
   public List<ProductSpecCharacteristicType> getProductCharacteristics() {
     return productCharacteristics;
   }
@@ -67,21 +52,15 @@ public class RefinedProductType   {
   }
 
   public RefinedProductType addSubProductsItem(ComposingProductType subProductsItem) {
-    if (this.subProducts == null) {
-      this.subProducts = new ArrayList<ComposingProductType>();
-    }
     this.subProducts.add(subProductsItem);
     return this;
   }
 
-  /**
+   /**
    * List of individual product identifiers that compose the parent product when included in an specific product Offering. This information element can be used as a modifier of a default configuration of a product when incorporated within an specific offering
    * @return subProducts
   **/
   @ApiModelProperty(value = "List of individual product identifiers that compose the parent product when included in an specific product Offering. This information element can be used as a modifier of a default configuration of a product when incorporated within an specific offering")
-
-  @Valid
-
   public List<ComposingProductType> getSubProducts() {
     return subProducts;
   }

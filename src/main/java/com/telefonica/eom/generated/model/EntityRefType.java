@@ -2,26 +2,19 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.telefonica.eom.generated.model.TimePeriodType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.telefonica.eom.generated.model.TimePeriodType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * Reference to an external entity that can be tipically queried with another API such as a customer account, a ticket, etc.
  */
 @ApiModel(description = "Reference to an external entity that can be tipically queried with another API such as a customer account, a ticket, etc.")
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class EntityRefType   {
+public class EntityRefType  implements Serializable {
   @JsonProperty("id")
   private String id = null;
 
@@ -48,14 +41,12 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * Unique identifier of the entity
    * @return id
   **/
   @ApiModelProperty(required = true, value = "Unique identifier of the entity")
   @NotNull
-
-
   public String getId() {
     return id;
   }
@@ -69,14 +60,12 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * URI where to query or perform actions on the entity
    * @return href
   **/
   @ApiModelProperty(required = true, value = "URI where to query or perform actions on the entity")
   @NotNull
-
-
   public String getHref() {
     return href;
   }
@@ -90,13 +79,11 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * Screen name of the entity
    * @return name
   **/
   @ApiModelProperty(value = "Screen name of the entity")
-
-
   public String getName() {
     return name;
   }
@@ -110,13 +97,11 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * Role on the entity
    * @return role
   **/
   @ApiModelProperty(value = "Role on the entity")
-
-
   public String getRole() {
     return role;
   }
@@ -130,14 +115,11 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * Duration of the relationship with the entity
    * @return validFor
   **/
   @ApiModelProperty(value = "Duration of the relationship with the entity")
-
-  @Valid
-
   public TimePeriodType getValidFor() {
     return validFor;
   }
@@ -151,13 +133,11 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * Type of entity (e.g.: account, customer, ticket, etc.)
    * @return entityType
   **/
   @ApiModelProperty(value = "Type of entity (e.g.: account, customer, ticket, etc.)")
-
-
   public String getEntityType() {
     return entityType;
   }
@@ -171,13 +151,11 @@ public class EntityRefType   {
     return this;
   }
 
-  /**
+   /**
    * Description of the entity
    * @return description
   **/
   @ApiModelProperty(value = "Description of the entity")
-
-
   public String getDescription() {
     return description;
   }

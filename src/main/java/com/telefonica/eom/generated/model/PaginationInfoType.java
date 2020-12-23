@@ -5,20 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * PaginationInfoType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class PaginationInfoType   {
+public class PaginationInfoType  implements Serializable {
   @JsonProperty("totalPages")
   private Integer totalPages = null;
 
@@ -39,14 +33,12 @@ public class PaginationInfoType   {
     return this;
   }
 
-  /**
+   /**
    * Número total de paginas
    * @return totalPages
   **/
   @ApiModelProperty(required = true, value = "Número total de paginas")
   @NotNull
-
-
   public Integer getTotalPages() {
     return totalPages;
   }
@@ -60,14 +52,12 @@ public class PaginationInfoType   {
     return this;
   }
 
-  /**
+   /**
    * Número total de registros en Base de datos (items)
    * @return totalResults
   **/
   @ApiModelProperty(required = true, value = "Número total de registros en Base de datos (items)")
   @NotNull
-
-
   public Integer getTotalResults() {
     return totalResults;
   }
@@ -81,15 +71,13 @@ public class PaginationInfoType   {
     return this;
   }
 
-  /**
+   /**
    * Indica si estas en la ultima pagina
    * @return last
   **/
   @ApiModelProperty(required = true, value = "Indica si estas en la ultima pagina")
   @NotNull
-
-
-  public Boolean isLast() {
+  public Boolean getLast() {
     return last;
   }
 
@@ -102,15 +90,13 @@ public class PaginationInfoType   {
     return this;
   }
 
-  /**
+   /**
    * Indica si estas en la primera pagina
    * @return first
   **/
   @ApiModelProperty(required = true, value = "Indica si estas en la primera pagina")
   @NotNull
-
-
-  public Boolean isFirst() {
+  public Boolean getFirst() {
     return first;
   }
 
@@ -123,14 +109,12 @@ public class PaginationInfoType   {
     return this;
   }
 
-  /**
+   /**
    * Número de items por pagina
    * @return itemsPerPage
   **/
   @ApiModelProperty(required = true, value = "Número de items por pagina")
   @NotNull
-
-
   public Integer getItemsPerPage() {
     return itemsPerPage;
   }

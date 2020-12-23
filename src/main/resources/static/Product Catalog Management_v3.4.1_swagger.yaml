@@ -542,6 +542,23 @@ paths:
             X-Total-Count:
               type: "integer"
               description: "Total results"
+        400:
+          description: "400 BAD REQUEST"
+          schema:
+            $ref: "#/definitions/ExceptionType"
+        404:
+          description: "404 NOT FOUND"
+          schema:
+            $ref: "#/definitions/ExceptionType"    
+        409:
+          description: "409 CONFLICT"
+          schema:
+            $ref: "#/definitions/ExceptionType"
+        500:
+          description: "500 INTERNAL SERVER ERROR"
+          schema:
+            $ref: "#/definitions/ExceptionType"                                 
+            
     post:
       tags:
       - "offerings"
@@ -7662,8 +7679,6 @@ definitions:
   ProductSpecCharacteristicType:
     required:
     - "name"
-    - "valueType"
-    discriminator: "valueType"
     properties:
       id:
         type: "string"
@@ -7674,25 +7689,22 @@ definitions:
       description:
         type: "string"
         description: "A narrative that explains the characteristic"
-      valueType:
-        type: "string"
-        description: "Indicates the kind of value that the characteristic can take"
-        enum:
-        - "integerWrapper"
-        - "decimalWrapper"
-        - "stringWrapper"
-        - "booleanWrapper"
-        - "numericWrapper"
-        - "textWrapper"
-        - "objectWrapper"
       validFor:
         description: "The period of time for which a characteristic is applicable"
         $ref: "#/definitions/TimePeriodType"
+      productSpecCharacteristicValue:
+        type: "array"
+        description: "List of values that could be configured for a given characteristic\
+          \ when valueType is different from object"
+        items:
+          $ref: "#/definitions/ProductSpecCharacteristicValueType"
+      objectCharacteristicValue:
+        description: "Value of the characteristic when valueType is object"
+        $ref: "#/definitions/ObjectCharacteristicValueType"          
     example:
       validFor:
         startDateTime: "2000-01-23T04:56:07.000+00:00"
         endDateTime: "2000-01-23T04:56:07.000+00:00"
-      valueType: "integerWrapper"
       name: "name"
       description: "description"
       id: "id"
@@ -7737,6 +7749,7 @@ definitions:
             \ when valueType is different from object"
           items:
             $ref: "#/definitions/ProductSpecCharacteristicValueType"
+
   numericWrapper:
     allOf:
     - $ref: "#/definitions/ProductSpecCharacteristicType"
@@ -8197,6 +8210,23 @@ definitions:
           - "rural"
           - "any"
           default: "national"
+  ExceptionType:
+    required:
+    - "exceptionId"
+    - "exceptionText"
+    properties:
+      exceptionId:
+        type: "string"
+        description: "Identifier of the exception"
+      exceptionText:
+        type: "string"
+        description: "text describing the exception"
+      moreInfo:
+        type: "string"
+        description: "additional information on the exception"
+      userMessage:
+        type: "string"
+        description: "information valuable for the consumer"
 x-version-control:
   2.5.0:
     date: "29/01/2020"

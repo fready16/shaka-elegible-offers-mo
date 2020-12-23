@@ -2,25 +2,18 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.telefonica.eom.generated.model.MoneyType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.telefonica.eom.generated.model.MoneyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * PriceBenefitType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class PriceBenefitType   {
+public class PriceBenefitType  implements Serializable {
   @JsonProperty("priceType")
   private String priceType = null;
 
@@ -38,13 +31,11 @@ public class PriceBenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Identificación para el tipo de componente de precio individual
    * @return priceType
   **/
   @ApiModelProperty(value = "Identificación para el tipo de componente de precio individual")
-
-
   public String getPriceType() {
     return priceType;
   }
@@ -58,13 +49,11 @@ public class PriceBenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Identificación de la periodicidad de cobro recurrente  en el caso de modelos de precios recurrentes (por ejemplo, mensual, anual)
    * @return recurringChargePeriod
   **/
   @ApiModelProperty(value = "Identificación de la periodicidad de cobro recurrente  en el caso de modelos de precios recurrentes (por ejemplo, mensual, anual)")
-
-
   public String getRecurringChargePeriod() {
     return recurringChargePeriod;
   }
@@ -78,14 +67,11 @@ public class PriceBenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es el precio del beneficio
    * @return price
   **/
   @ApiModelProperty(value = "Es el precio del beneficio")
-
-  @Valid
-
   public MoneyType getPrice() {
     return price;
   }
@@ -99,14 +85,11 @@ public class PriceBenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es el precio del beneficio con impuesto
    * @return priceWithTax
   **/
   @ApiModelProperty(value = "Es el precio del beneficio con impuesto")
-
-  @Valid
-
   public MoneyType getPriceWithTax() {
     return priceWithTax;
   }

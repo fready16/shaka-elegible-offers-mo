@@ -6,26 +6,18 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.telefonica.eom.generated.model.MoneyType;
 import com.telefonica.eom.generated.model.QuantityType;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * ProdOfferPriceAlterationType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class ProdOfferPriceAlterationType   {
+public class ProdOfferPriceAlterationType  implements Serializable {
   @JsonProperty("id")
   private String id = null;
 
@@ -158,21 +150,18 @@ public class ProdOfferPriceAlterationType   {
   private MoneyType price = null;
 
   @JsonProperty("additionalData")
-  @Valid
-  private List<MoneyType> additionalData = null;
+  private List<MoneyType> additionalData = new ArrayList<MoneyType>();
 
   public ProdOfferPriceAlterationType id(String id) {
     this.id = id;
     return this;
   }
 
-  /**
+   /**
    * A unique identifier for the price alteration model
    * @return id
   **/
   @ApiModelProperty(value = "A unique identifier for the price alteration model")
-
-
   public String getId() {
     return id;
   }
@@ -186,14 +175,12 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * A human readable charging discount model name
    * @return name
   **/
   @ApiModelProperty(required = true, value = "A human readable charging discount model name")
   @NotNull
-
-
   public String getName() {
     return name;
   }
@@ -207,13 +194,11 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * A human readable discount short description
    * @return description
   **/
   @ApiModelProperty(value = "A human readable discount short description")
-
-
   public String getDescription() {
     return description;
   }
@@ -227,14 +212,12 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Text describing the condition that triggers the alteration to be applied
    * @return priceCondition
   **/
   @ApiModelProperty(required = true, value = "Text describing the condition that triggers the alteration to be applied")
   @NotNull
-
-
   public String getPriceCondition() {
     return priceCondition;
   }
@@ -248,14 +231,12 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Identification for the type of individual alteration type
    * @return priceType
   **/
   @ApiModelProperty(required = true, value = "Identification for the type of individual alteration type")
   @NotNull
-
-
   public PriceTypeEnum getPriceType() {
     return priceType;
   }
@@ -269,13 +250,11 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Identification for the recurring charging periodicity in the case of recurring pricing models (e.g.: monthly, yearly)
    * @return recurringChargePeriod
   **/
   @ApiModelProperty(value = "Identification for the recurring charging periodicity in the case of recurring pricing models (e.g.: monthly, yearly)")
-
-
   public RecurringChargePeriodEnum getRecurringChargePeriod() {
     return recurringChargePeriod;
   }
@@ -289,13 +268,11 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Duration defined as a number of instances of the recurring period to apply the alteration (e.g.: 2 months for the recurring discount)
    * @return applicationDuration
   **/
   @ApiModelProperty(value = "Duration defined as a number of instances of the recurring period to apply the alteration (e.g.: 2 months for the recurring discount)")
-
-
   public Integer getApplicationDuration() {
     return applicationDuration;
   }
@@ -309,14 +286,11 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Indication of the criteria to be used for the charging (e.g.: per minute, per second, per GB, per 50GB, per license, per subscription to offering ...). Notice that in the TMForum API version 14.5 this parameter is defined as a string, not meeting SID definition
    * @return unitOfMeasure
   **/
   @ApiModelProperty(value = "Indication of the criteria to be used for the charging (e.g.: per minute, per second, per GB, per 50GB, per license, per subscription to offering ...). Notice that in the TMForum API version 14.5 this parameter is defined as a string, not meeting SID definition")
-
-  @Valid
-
   public QuantityType getUnitOfMeasure() {
     return unitOfMeasure;
   }
@@ -330,13 +304,11 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Identification for the type of discount to be applied
    * @return discountType
   **/
   @ApiModelProperty(value = "Identification for the type of discount to be applied")
-
-
   public DiscountTypeEnum getDiscountType() {
     return discountType;
   }
@@ -350,14 +322,11 @@ public class ProdOfferPriceAlterationType   {
     return this;
   }
 
-  /**
+   /**
    * Value of the alteration for the case of discount. This will refer to a monetary value or a percentage
    * @return price
   **/
   @ApiModelProperty(value = "Value of the alteration for the case of discount. This will refer to a monetary value or a percentage")
-
-  @Valid
-
   public MoneyType getPrice() {
     return price;
   }
@@ -372,21 +341,15 @@ public class ProdOfferPriceAlterationType   {
   }
 
   public ProdOfferPriceAlterationType addAdditionalDataItem(MoneyType additionalDataItem) {
-    if (this.additionalData == null) {
-      this.additionalData = new ArrayList<MoneyType>();
-    }
     this.additionalData.add(additionalDataItem);
     return this;
   }
 
-  /**
+   /**
    * Any additional metadata that the application may supply (implementation and application specific
    * @return additionalData
   **/
   @ApiModelProperty(value = "Any additional metadata that the application may supply (implementation and application specific")
-
-  @Valid
-
   public List<MoneyType> getAdditionalData() {
     return additionalData;
   }

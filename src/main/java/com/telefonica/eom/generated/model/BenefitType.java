@@ -2,28 +2,21 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.telefonica.eom.generated.model.CharacteristicBenefitType;
 import com.telefonica.eom.generated.model.PriceBenefitType;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * BenefitType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class BenefitType   {
+public class BenefitType  implements Serializable {
   @JsonProperty("id")
   private String id = null;
 
@@ -40,25 +33,21 @@ public class BenefitType   {
   private String downloadSpeed = null;
 
   @JsonProperty("characteristics")
-  @Valid
-  private List<CharacteristicBenefitType> characteristics = null;
+  private List<CharacteristicBenefitType> characteristics = new ArrayList<CharacteristicBenefitType>();
 
   @JsonProperty("priceBenefits")
-  @Valid
-  private List<PriceBenefitType> priceBenefits = null;
+  private List<PriceBenefitType> priceBenefits = new ArrayList<PriceBenefitType>();
 
   public BenefitType id(String id) {
     this.id = id;
     return this;
   }
 
-  /**
+   /**
    * id del beneficio (boCode)
    * @return id
   **/
   @ApiModelProperty(value = "id del beneficio (boCode)")
-
-
   public String getId() {
     return id;
   }
@@ -72,13 +61,11 @@ public class BenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Nombre del beneficio. (SE OBTENDRA TABLE BILLING OFFERING en base al BILLINOFFER CODE)
    * @return name
   **/
   @ApiModelProperty(value = "Nombre del beneficio. (SE OBTENDRA TABLE BILLING OFFERING en base al BILLINOFFER CODE)")
-
-
   public String getName() {
     return name;
   }
@@ -92,13 +79,11 @@ public class BenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es el tipo de beneficio
    * @return type
   **/
   @ApiModelProperty(value = "Es el tipo de beneficio")
-
-
   public String getType() {
     return type;
   }
@@ -112,13 +97,11 @@ public class BenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es el valor del beneficio
    * @return value
   **/
   @ApiModelProperty(value = "Es el valor del beneficio")
-
-
   public String getValue() {
     return value;
   }
@@ -132,13 +115,11 @@ public class BenefitType   {
     return this;
   }
 
-  /**
+   /**
    * Es la velocidad de descarga
    * @return downloadSpeed
   **/
   @ApiModelProperty(value = "Es la velocidad de descarga")
-
-
   public String getDownloadSpeed() {
     return downloadSpeed;
   }
@@ -153,21 +134,15 @@ public class BenefitType   {
   }
 
   public BenefitType addCharacteristicsItem(CharacteristicBenefitType characteristicsItem) {
-    if (this.characteristics == null) {
-      this.characteristics = new ArrayList<CharacteristicBenefitType>();
-    }
     this.characteristics.add(characteristicsItem);
     return this;
   }
 
-  /**
+   /**
    * Aquí se poblaran las caracteristicas del beneficio
    * @return characteristics
   **/
   @ApiModelProperty(value = "Aquí se poblaran las caracteristicas del beneficio")
-
-  @Valid
-
   public List<CharacteristicBenefitType> getCharacteristics() {
     return characteristics;
   }
@@ -182,21 +157,15 @@ public class BenefitType   {
   }
 
   public BenefitType addPriceBenefitsItem(PriceBenefitType priceBenefitsItem) {
-    if (this.priceBenefits == null) {
-      this.priceBenefits = new ArrayList<PriceBenefitType>();
-    }
     this.priceBenefits.add(priceBenefitsItem);
     return this;
   }
 
-  /**
+   /**
    * Es el precio del beneficio
    * @return priceBenefits
   **/
   @ApiModelProperty(value = "Es el precio del beneficio")
-
-  @Valid
-
   public List<PriceBenefitType> getPriceBenefits() {
     return priceBenefits;
   }

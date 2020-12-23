@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
+import com.telefonica.eom.generated.model.ExceptionType;
 import com.telefonica.eom.generated.model.ResponseType;
 import com.telefonica.eom.mapper.ApplicationRequestMapper;
 import com.telefonica.eom.pojo.MobileElegibleOffersRequest;
@@ -42,8 +43,12 @@ public class OfferingsApiController {
 
 	@ApiOperation(value = "Retrieve a list of offerings", notes = "", response = ResponseType.class, tags = {
 			"offerings", })
-	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "Offerings retrieved successfully", response = ResponseType.class) })
+    @ApiResponses(value = { 
+            @ApiResponse(code = 200, message = "Offerings retrieved successfully", response = ResponseType.class),
+            @ApiResponse(code = 400, message = "400 BAD REQUEST", response = ExceptionType.class),
+            @ApiResponse(code = 404, message = "404 NOT FOUND", response = ExceptionType.class),
+            @ApiResponse(code = 409, message = "409 CONFLICT", response = ExceptionType.class),
+            @ApiResponse(code = 500, message = "500 INTERNAL SERVER ERROR", response = ExceptionType.class) })
 	@GetMapping(value = "/offerings", produces = { "application/json" })
 	public ResponseEntity<ResponseType> getOfferings(
 			@ApiParam(value = "If this API is used via a platform acting as a common entry point to different OBs, this identifier is used to route the request to the corresponding OB environment") @RequestHeader(value = "UNICA-ServiceId", required = false) String unICAServiceId,
@@ -148,11 +153,11 @@ public class OfferingsApiController {
 				installationAddressDepartment, paginationInfoSize, paginationInfoPageCount, paginationInfoPage,
 				paginationInfoMaxResultCount, sortCriteriaName, sortCriteriaAscending);
 
+		ResponseType responseType = mobileElegibleOffersService.getOffers(meor);
+		
 		HttpHeaders httpHeaders = new HttpHeaders();
 		httpHeaders.add("UNICA-ServiceId", unICAServiceId);
 		httpHeaders.add("UNICA-Timestamp", new Timestamp(System.currentTimeMillis()).toString());
-
-		ResponseType responseType = mobileElegibleOffersService.getOffers(meor);
 
 		return new ResponseEntity<>(responseType, httpHeaders, HttpStatus.OK);
 	}

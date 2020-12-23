@@ -8,15 +8,12 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * ObjectCharacteristicValueType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = MobileQuota.class, name = "MobileQuota"),
@@ -24,10 +21,7 @@ import javax.validation.constraints.*;
   @JsonSubTypes.Type(value = TvPackages.class, name = "TvPackages"),
 })
 
-
-
-
-public class ObjectCharacteristicValueType   {
+public class ObjectCharacteristicValueType  implements Serializable {
   /**
    * type of characteristic information element, defines the format structure of the value information element (string or specific object type)
    */
@@ -72,13 +66,11 @@ public class ObjectCharacteristicValueType   {
     return this;
   }
 
-  /**
+   /**
    * type of characteristic information element, defines the format structure of the value information element (string or specific object type)
    * @return type
   **/
   @ApiModelProperty(value = "type of characteristic information element, defines the format structure of the value information element (string or specific object type)")
-
-
   public TypeEnum getType() {
     return type;
   }
@@ -92,13 +84,11 @@ public class ObjectCharacteristicValueType   {
     return this;
   }
 
-  /**
+   /**
    * This field provides a link to the schema describing the resource model for the Object defining the characteristics for a TV product
    * @return schemaLocation
   **/
   @ApiModelProperty(value = "This field provides a link to the schema describing the resource model for the Object defining the characteristics for a TV product")
-
-
   public String getSchemaLocation() {
     return schemaLocation;
   }

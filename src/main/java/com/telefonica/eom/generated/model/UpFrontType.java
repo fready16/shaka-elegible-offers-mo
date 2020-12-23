@@ -2,25 +2,18 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.telefonica.eom.generated.model.MoneyType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.telefonica.eom.generated.model.MoneyType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * UpFrontType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class UpFrontType   {
+public class UpFrontType  implements Serializable {
   @JsonProperty("indicator")
   private String indicator = null;
 
@@ -32,13 +25,11 @@ public class UpFrontType   {
     return this;
   }
 
-  /**
+   /**
    * Un identificador único para el modelo de penalización. Y: Indica que si aplica cobr de upfrint N: No aplica conbro de upfront
    * @return indicator
   **/
   @ApiModelProperty(value = "Un identificador único para el modelo de penalización. Y: Indica que si aplica cobr de upfrint N: No aplica conbro de upfront")
-
-
   public String getIndicator() {
     return indicator;
   }
@@ -52,14 +43,11 @@ public class UpFrontType   {
     return this;
   }
 
-  /**
+   /**
    * Es el precio del upfront
    * @return price
   **/
   @ApiModelProperty(value = "Es el precio del upfront")
-
-  @Valid
-
   public MoneyType getPrice() {
     return price;
   }

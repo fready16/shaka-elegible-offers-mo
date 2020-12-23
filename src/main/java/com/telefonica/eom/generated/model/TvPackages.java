@@ -6,28 +6,20 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.telefonica.eom.generated.model.ObjectCharacteristicValueType;
 import com.telefonica.eom.generated.model.PackageType;
-
+import com.telefonica.eom.generated.model.TvPackagesCharacteristicType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * TvPackages
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class TvPackages extends ObjectCharacteristicValueType  {
+public class TvPackages extends ObjectCharacteristicValueType implements Serializable {
   @JsonProperty("packages")
-  @Valid
   private List<PackageType> packages = new ArrayList<PackageType>();
 
   public TvPackages packages(List<PackageType> packages) {
@@ -40,15 +32,12 @@ public class TvPackages extends ObjectCharacteristicValueType  {
     return this;
   }
 
-  /**
+   /**
    * List of subscribed available TV packages
    * @return packages
   **/
   @ApiModelProperty(required = true, value = "List of subscribed available TV packages")
   @NotNull
-
-  @Valid
-
   public List<PackageType> getPackages() {
     return packages;
   }

@@ -2,31 +2,23 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.telefonica.eom.generated.model.OfferingType;
 import com.telefonica.eom.generated.model.PaginationInfoType;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * ResponseType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class ResponseType   {
+public class ResponseType  implements Serializable {
   @JsonProperty("offerings")
-  @Valid
-  private List<OfferingType> offerings = null;
+  private List<OfferingType> offerings = new ArrayList<OfferingType>();
 
   @JsonProperty("paginationInfo")
   private PaginationInfoType paginationInfo = null;
@@ -37,21 +29,15 @@ public class ResponseType   {
   }
 
   public ResponseType addOfferingsItem(OfferingType offeringsItem) {
-    if (this.offerings == null) {
-      this.offerings = new ArrayList<OfferingType>();
-    }
     this.offerings.add(offeringsItem);
     return this;
   }
 
-  /**
+   /**
    * 
    * @return offerings
   **/
   @ApiModelProperty(value = "")
-
-  @Valid
-
   public List<OfferingType> getOfferings() {
     return offerings;
   }
@@ -65,14 +51,11 @@ public class ResponseType   {
     return this;
   }
 
-  /**
+   /**
    * 
    * @return paginationInfo
   **/
   @ApiModelProperty(value = "")
-
-  @Valid
-
   public PaginationInfoType getPaginationInfo() {
     return paginationInfo;
   }

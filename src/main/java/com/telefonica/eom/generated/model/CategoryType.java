@@ -2,30 +2,23 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.telefonica.eom.generated.model.CategoryRefType;
 import com.telefonica.eom.generated.model.CategoryRequestType;
 import com.telefonica.eom.generated.model.TimePeriodType;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.OffsetDateTime;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * CategoryType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class CategoryType   {
+public class CategoryType  implements Serializable {
   @JsonProperty("name")
   private String name = null;
 
@@ -51,21 +44,18 @@ public class CategoryType   {
   private String parentHref = null;
 
   @JsonProperty("children")
-  @Valid
-  private List<CategoryRefType> children = null;
+  private List<CategoryRefType> children = new ArrayList<CategoryRefType>();
 
   public CategoryType name(String name) {
     this.name = name;
     return this;
   }
 
-  /**
+   /**
    * Category name
    * @return name
   **/
   @ApiModelProperty(value = "Category name")
-
-
   public String getName() {
     return name;
   }
@@ -79,13 +69,11 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * Category description
    * @return description
   **/
   @ApiModelProperty(value = "Category description")
-
-
   public String getDescription() {
     return description;
   }
@@ -99,14 +87,11 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * Date when the last update was performed
    * @return lastUpdate
   **/
   @ApiModelProperty(value = "Date when the last update was performed")
-
-  @Valid
-
   public OffsetDateTime getLastUpdate() {
     return lastUpdate;
   }
@@ -120,13 +105,11 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * Category current status
    * @return lifecycleStatus
   **/
   @ApiModelProperty(value = "Category current status")
-
-
   public String getLifecycleStatus() {
     return lifecycleStatus;
   }
@@ -140,14 +123,11 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * Period of time the category is valid
    * @return validFor
   **/
   @ApiModelProperty(value = "Period of time the category is valid")
-
-  @Valid
-
   public TimePeriodType getValidFor() {
     return validFor;
   }
@@ -161,14 +141,12 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * True if the category is the root of the category tree. False otherwise
    * @return isRoot
   **/
   @ApiModelProperty(value = "True if the category is the root of the category tree. False otherwise")
-
-
-  public Boolean isIsRoot() {
+  public Boolean getIsRoot() {
     return isRoot;
   }
 
@@ -181,13 +159,11 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * Id of the parent category
    * @return parentId
   **/
   @ApiModelProperty(value = "Id of the parent category")
-
-
   public String getParentId() {
     return parentId;
   }
@@ -201,13 +177,11 @@ public class CategoryType   {
     return this;
   }
 
-  /**
+   /**
    * href of the parent category
    * @return parentHref
   **/
   @ApiModelProperty(value = "href of the parent category")
-
-
   public String getParentHref() {
     return parentHref;
   }
@@ -222,21 +196,15 @@ public class CategoryType   {
   }
 
   public CategoryType addChildrenItem(CategoryRefType childrenItem) {
-    if (this.children == null) {
-      this.children = new ArrayList<CategoryRefType>();
-    }
     this.children.add(childrenItem);
     return this;
   }
 
-  /**
+   /**
    * References to the children categories
    * @return children
   **/
   @ApiModelProperty(value = "References to the children categories")
-
-  @Valid
-
   public List<CategoryRefType> getChildren() {
     return children;
   }

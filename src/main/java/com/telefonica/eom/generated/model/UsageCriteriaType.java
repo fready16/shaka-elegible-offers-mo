@@ -8,21 +8,15 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * Definition of usage criteria considered in the quota for consumption measurement (timebands, origins or destinations).
  */
 @ApiModel(description = "Definition of usage criteria considered in the quota for consumption measurement (timebands, origins or destinations).")
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class UsageCriteriaType   {
+public class UsageCriteriaType  implements Serializable {
   /**
    * Gets or Sets origins
    */
@@ -59,8 +53,7 @@ public class UsageCriteriaType   {
   }
 
   @JsonProperty("origins")
-  @Valid
-  private List<OriginsEnum> origins = null;
+  private List<OriginsEnum> origins = new ArrayList<OriginsEnum>();
 
   /**
    * Gets or Sets destinations
@@ -110,8 +103,7 @@ public class UsageCriteriaType   {
   }
 
   @JsonProperty("destinations")
-  @Valid
-  private List<DestinationsEnum> destinations = null;
+  private List<DestinationsEnum> destinations = new ArrayList<DestinationsEnum>();
 
   /**
    * Gets or Sets timebands
@@ -155,8 +147,7 @@ public class UsageCriteriaType   {
   }
 
   @JsonProperty("timebands")
-  @Valid
-  private List<TimebandsEnum> timebands = null;
+  private List<TimebandsEnum> timebands = new ArrayList<TimebandsEnum>();
 
   public UsageCriteriaType origins(List<OriginsEnum> origins) {
     this.origins = origins;
@@ -164,20 +155,15 @@ public class UsageCriteriaType   {
   }
 
   public UsageCriteriaType addOriginsItem(OriginsEnum originsItem) {
-    if (this.origins == null) {
-      this.origins = new ArrayList<OriginsEnum>();
-    }
     this.origins.add(originsItem);
     return this;
   }
 
-  /**
+   /**
    * List of origins that are considered when registering usage of a given product/service by the consumption quota
    * @return origins
   **/
   @ApiModelProperty(value = "List of origins that are considered when registering usage of a given product/service by the consumption quota")
-
-
   public List<OriginsEnum> getOrigins() {
     return origins;
   }
@@ -192,20 +178,15 @@ public class UsageCriteriaType   {
   }
 
   public UsageCriteriaType addDestinationsItem(DestinationsEnum destinationsItem) {
-    if (this.destinations == null) {
-      this.destinations = new ArrayList<DestinationsEnum>();
-    }
     this.destinations.add(destinationsItem);
     return this;
   }
 
-  /**
+   /**
    * List of destinations that are considered when registering usage of a given product/service by the consumption quota
    * @return destinations
   **/
   @ApiModelProperty(value = "List of destinations that are considered when registering usage of a given product/service by the consumption quota")
-
-
   public List<DestinationsEnum> getDestinations() {
     return destinations;
   }
@@ -220,20 +201,15 @@ public class UsageCriteriaType   {
   }
 
   public UsageCriteriaType addTimebandsItem(TimebandsEnum timebandsItem) {
-    if (this.timebands == null) {
-      this.timebands = new ArrayList<TimebandsEnum>();
-    }
     this.timebands.add(timebandsItem);
     return this;
   }
 
-  /**
+   /**
    * List of time bands that are considered when registering usage of a given product/service by the consumption quota
    * @return timebands
   **/
   @ApiModelProperty(value = "List of time bands that are considered when registering usage of a given product/service by the consumption quota")
-
-
   public List<TimebandsEnum> getTimebands() {
     return timebands;
   }

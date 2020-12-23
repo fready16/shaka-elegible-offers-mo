@@ -2,26 +2,19 @@ package com.telefonica.eom.generated.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.telefonica.eom.generated.model.TimePeriodType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.telefonica.eom.generated.model.TimePeriodType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import java.time.OffsetDateTime;
-import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+import java.io.Serializable;
 import javax.validation.constraints.*;
-
 /**
  * CategoryRequestType
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-10-12T21:43:17.267Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-12-22T11:26:33.111-05:00")
 
-
-
-
-public class CategoryRequestType   {
+public class CategoryRequestType  implements Serializable {
   @JsonProperty("name")
   private String name = null;
 
@@ -51,13 +44,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * Category name
    * @return name
   **/
   @ApiModelProperty(value = "Category name")
-
-
   public String getName() {
     return name;
   }
@@ -71,13 +62,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * Category description
    * @return description
   **/
   @ApiModelProperty(value = "Category description")
-
-
   public String getDescription() {
     return description;
   }
@@ -91,14 +80,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * Date when the last update was performed
    * @return lastUpdate
   **/
   @ApiModelProperty(value = "Date when the last update was performed")
-
-  @Valid
-
   public OffsetDateTime getLastUpdate() {
     return lastUpdate;
   }
@@ -112,13 +98,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * Category current status
    * @return lifecycleStatus
   **/
   @ApiModelProperty(value = "Category current status")
-
-
   public String getLifecycleStatus() {
     return lifecycleStatus;
   }
@@ -132,14 +116,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * Period of time the category is valid
    * @return validFor
   **/
   @ApiModelProperty(value = "Period of time the category is valid")
-
-  @Valid
-
   public TimePeriodType getValidFor() {
     return validFor;
   }
@@ -153,14 +134,12 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * True if the category is the root of the category tree. False otherwise
    * @return isRoot
   **/
   @ApiModelProperty(value = "True if the category is the root of the category tree. False otherwise")
-
-
-  public Boolean isIsRoot() {
+  public Boolean getIsRoot() {
     return isRoot;
   }
 
@@ -173,13 +152,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * Id of the parent category
    * @return parentId
   **/
   @ApiModelProperty(value = "Id of the parent category")
-
-
   public String getParentId() {
     return parentId;
   }
@@ -193,13 +170,11 @@ public class CategoryRequestType   {
     return this;
   }
 
-  /**
+   /**
    * href of the parent category
    * @return parentHref
   **/
   @ApiModelProperty(value = "href of the parent category")
-
-
   public String getParentHref() {
     return parentHref;
   }
