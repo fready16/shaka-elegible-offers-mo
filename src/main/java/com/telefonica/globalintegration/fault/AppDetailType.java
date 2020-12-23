@@ -8,25 +8,25 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Clase Java para appDetailType complex type.
+ * <p>Clase Java para appDetailType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="appDetailType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="exceptionAppCode" type="{http://telefonica.com/globalIntegration/fault}exceptionAppCodeType"/&amp;gt;
- *         &amp;lt;element name="exceptionAppMessage" type="{http://telefonica.com/globalIntegration/fault}exceptionAppMessageType"/&amp;gt;
- *         &amp;lt;element name="exceptionAppLocation" type="{http://telefonica.com/globalIntegration/fault}exceptionAppLocationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="exceptionAppCause" type="{http://telefonica.com/globalIntegration/fault}exceptionAppCauseType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="varArg" type="{http://telefonica.com/globalIntegration/fault}varArgType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="appDetailType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="exceptionAppCode" type="{http://telefonica.com/globalIntegration/fault}exceptionAppCodeType"/&gt;
+ *         &lt;element name="exceptionAppMessage" type="{http://telefonica.com/globalIntegration/fault}exceptionAppMessageType"/&gt;
+ *         &lt;element name="exceptionAppLocation" type="{http://telefonica.com/globalIntegration/fault}exceptionAppLocationType" minOccurs="0"/&gt;
+ *         &lt;element name="exceptionAppCause" type="{http://telefonica.com/globalIntegration/fault}exceptionAppCauseType" minOccurs="0"/&gt;
+ *         &lt;element name="varArg" type="{http://telefonica.com/globalIntegration/fault}varArgType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

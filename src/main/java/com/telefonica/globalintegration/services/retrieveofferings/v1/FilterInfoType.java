@@ -41,46 +41,46 @@ import javax.xml.bind.annotation.XmlType;
  *                                         - offerName: Name of the Offer. Could be sent the name partially.
  * 			
  * 
- * &lt;p&gt;Clase Java para FilterInfoType complex type.
+ * <p>Clase Java para FilterInfoType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="FilterInfoType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="sourceProductOfferingId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}sourceProductOfferingIdProductOfferingType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="sourceType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}sourceTypeProductOfferingType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="actionType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}actionTypeProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="customerType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}customerTypeIndividualType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="CommercialZoneId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}CommercialZoneIdGeographicAreaType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="serviceTechnology" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}serviceTechnologyProductLineType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="networkTechnology" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}networkTechnologyProductLineType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="maxSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxSpeedProductSpecCharacteristicType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="serviceabilityID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}IDBusinessInteractionType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="filterFacets" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIKeyValueType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="creditScore" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}creditScoreCustomerType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="departament" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}departamentPlaceType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="storeId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}storeIdPlaceType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="dealerCode" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}dealerCodePartyType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="portInFlag" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}flagBusinessInteractionBusinessInteractionType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="planGroup" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}planGroupProductSpecificationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="planRank" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}entityIdEntityType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="planCommitmentDuration" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}planCommitmentDurationProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="retentionFlag" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}flagBusinessInteractionBusinessInteractionType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="offerMinInternetSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxSpeedProductSpecCharacteristicType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="offerMaxInternetSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxSpeedProductSpecCharacteristicType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="invoiceCompany" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}entityIdEntityType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="paginationInfo" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PagingInfoType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="sortCriteria" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}SortCriteriaType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="name" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offerNameType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="product" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="FilterInfoType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="sourceProductOfferingId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}sourceProductOfferingIdProductOfferingType" minOccurs="0"/&gt;
+ *         &lt;element name="sourceType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}sourceTypeProductOfferingType" minOccurs="0"/&gt;
+ *         &lt;element name="actionType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}actionTypeProductType" minOccurs="0"/&gt;
+ *         &lt;element name="customerType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}customerTypeIndividualType" minOccurs="0"/&gt;
+ *         &lt;element name="CommercialZoneId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}CommercialZoneIdGeographicAreaType" minOccurs="0"/&gt;
+ *         &lt;element name="serviceTechnology" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}serviceTechnologyProductLineType" minOccurs="0"/&gt;
+ *         &lt;element name="networkTechnology" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}networkTechnologyProductLineType" minOccurs="0"/&gt;
+ *         &lt;element name="maxSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxSpeedProductSpecCharacteristicType" minOccurs="0"/&gt;
+ *         &lt;element name="serviceabilityID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}IDBusinessInteractionType" minOccurs="0"/&gt;
+ *         &lt;element name="filterFacets" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIKeyValueType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="creditScore" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}creditScoreCustomerType" minOccurs="0"/&gt;
+ *         &lt;element name="departament" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}departamentPlaceType" minOccurs="0"/&gt;
+ *         &lt;element name="storeId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}storeIdPlaceType" minOccurs="0"/&gt;
+ *         &lt;element name="dealerCode" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}dealerCodePartyType" minOccurs="0"/&gt;
+ *         &lt;element name="portInFlag" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}flagBusinessInteractionBusinessInteractionType" minOccurs="0"/&gt;
+ *         &lt;element name="planGroup" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}planGroupProductSpecificationType" minOccurs="0"/&gt;
+ *         &lt;element name="planRank" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}entityIdEntityType" minOccurs="0"/&gt;
+ *         &lt;element name="planCommitmentDuration" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}planCommitmentDurationProductType" minOccurs="0"/&gt;
+ *         &lt;element name="retentionFlag" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}flagBusinessInteractionBusinessInteractionType" minOccurs="0"/&gt;
+ *         &lt;element name="offerMinInternetSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxSpeedProductSpecCharacteristicType" minOccurs="0"/&gt;
+ *         &lt;element name="offerMaxInternetSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxSpeedProductSpecCharacteristicType" minOccurs="0"/&gt;
+ *         &lt;element name="invoiceCompany" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}entityIdEntityType" minOccurs="0"/&gt;
+ *         &lt;element name="paginationInfo" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PagingInfoType" minOccurs="0"/&gt;
+ *         &lt;element name="sortCriteria" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}SortCriteriaType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="name" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offerNameType" minOccurs="0"/&gt;
+ *         &lt;element name="product" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -362,20 +362,20 @@ public class FilterInfoType {
     /**
      * Gets the value of the filterFacets property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the filterFacets property.
+     * This is why there is not a <CODE>set</CODE> method for the filterFacets property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getFilterFacets().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link UNIKeyValueType }
      * 
@@ -703,20 +703,20 @@ public class FilterInfoType {
     /**
      * Gets the value of the sortCriteria property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the sortCriteria property.
+     * This is why there is not a <CODE>set</CODE> method for the sortCriteria property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getSortCriteria().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SortCriteriaType }
      * 

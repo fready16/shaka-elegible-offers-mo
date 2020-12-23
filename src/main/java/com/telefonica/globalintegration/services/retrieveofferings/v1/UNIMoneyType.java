@@ -17,22 +17,22 @@ import javax.xml.bind.annotation.XmlType;
  * 					- units: Units a quantity is measured in
  * 			
  * 
- * &lt;p&gt;Clase Java para UNIMoneyType complex type.
+ * <p>Clase Java para UNIMoneyType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="UNIMoneyType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="amount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIamountType"/&amp;gt;
- *         &amp;lt;element name="units" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}unitsType"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="UNIMoneyType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="amount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIamountType"/&gt;
+ *         &lt;element name="units" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}unitsType"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

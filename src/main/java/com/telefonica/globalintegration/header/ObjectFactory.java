@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the com.telefonica.globalintegration.header package. 
- * &lt;p&gt;An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -75,12 +75,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HeaderInType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link HeaderInType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link HeaderInType }{@code >}
      */
     @XmlElementDecl(namespace = "http://telefonica.com/globalIntegration/header", name = "HeaderIn")
     public JAXBElement<HeaderInType> createHeaderIn(HeaderInType value) {
@@ -88,12 +84,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HeaderOutType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link HeaderOutType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link HeaderOutType }{@code >}
      */
     @XmlElementDecl(namespace = "http://telefonica.com/globalIntegration/header", name = "HeaderOut")
     public JAXBElement<HeaderOutType> createHeaderOut(HeaderOutType value) {

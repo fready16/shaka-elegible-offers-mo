@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the com.telefonica.globalintegration.services.retrieveofferings.v1 package. 
- * &lt;p&gt;An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -163,12 +163,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RetrieveOfferingsRequestType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RetrieveOfferingsRequestType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RetrieveOfferingsRequestType }{@code >}
      */
     @XmlElementDecl(namespace = "http://telefonica.com/globalIntegration/services/retrieveOfferings/v1", name = "retrieveOfferingsRequest")
     public JAXBElement<RetrieveOfferingsRequestType> createRetrieveOfferingsRequest(RetrieveOfferingsRequestType value) {
@@ -176,12 +172,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RetrieveOfferingsResponseType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RetrieveOfferingsResponseType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RetrieveOfferingsResponseType }{@code >}
      */
     @XmlElementDecl(namespace = "http://telefonica.com/globalIntegration/services/retrieveOfferings/v1", name = "retrieveOfferingsResponse")
     public JAXBElement<RetrieveOfferingsResponseType> createRetrieveOfferingsResponse(RetrieveOfferingsResponseType value) {

@@ -46,50 +46,50 @@ import javax.xml.bind.annotation.XmlType;
  * 					- children: Synonym of OfferingType - retrieveOfferings (similar concept that SID attribute defined by 'p1:OfferingTypeOfferType')
  * 			
  * 
- * &lt;p&gt;Clase Java para OfferingTypeOfferType complex type.
+ * <p>Clase Java para OfferingTypeOfferType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="OfferingTypeOfferType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="businessType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}businessTypeProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="catalogItemId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offeringIdCatalogSpecificationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="catalogItemCode" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offeringIdCatalogSpecificationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="name" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}nameType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="description" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}descriptionType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="image" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}imageURLType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="banner" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}bannerURLType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="displayName" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIdisplayNameType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="catalogItemType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}catalogItemTypeProductCatalogType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="relationId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offeringIdCatalogSpecificationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="correlationId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}correlationIdProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="lifeCycleStatus" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}lifeCycleStatusProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="parentCatalogItemID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentCatalogItemIDProductCatalogType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="parentCatalogItemName" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentCatalogItemNameProductCatalogType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="parentCurrentStatus" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentCurrentStatusProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="parentAssignedID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentAssignedIDProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="planType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}planTypeCatalogSpecificationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="topRecommended" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}topRecommendedProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="productType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productTypeEnumType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="compatibleWithDevice" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}compatibleWithDeviceCatalogSpecificationType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="minNumOfSubscribers" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}minNumOfSubscribersProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="numOfSubscribers" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}numOfSubscribersProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="sharedPlan" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}sharedPlanPlanType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="isBundle" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}isBundleType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="additionalData" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIKeyValueType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="attachments" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}AttachmentOfferingsType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="planBoList" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PlanBODetailsType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="priceDetails" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PriceDetailsType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="children" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}OfferingTypeOfferType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="productOfferingProductSpecID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productOfferingProductSpecIDType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="OfferingTypeOfferType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="businessType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}businessTypeProductType" minOccurs="0"/&gt;
+ *         &lt;element name="catalogItemId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offeringIdCatalogSpecificationType" minOccurs="0"/&gt;
+ *         &lt;element name="catalogItemCode" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offeringIdCatalogSpecificationType" minOccurs="0"/&gt;
+ *         &lt;element name="name" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}nameType" minOccurs="0"/&gt;
+ *         &lt;element name="description" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}descriptionType" minOccurs="0"/&gt;
+ *         &lt;element name="image" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}imageURLType" minOccurs="0"/&gt;
+ *         &lt;element name="banner" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}bannerURLType" minOccurs="0"/&gt;
+ *         &lt;element name="displayName" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIdisplayNameType" minOccurs="0"/&gt;
+ *         &lt;element name="catalogItemType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}catalogItemTypeProductCatalogType" minOccurs="0"/&gt;
+ *         &lt;element name="relationId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}offeringIdCatalogSpecificationType" minOccurs="0"/&gt;
+ *         &lt;element name="correlationId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}correlationIdProductType" minOccurs="0"/&gt;
+ *         &lt;element name="lifeCycleStatus" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}lifeCycleStatusProductType" minOccurs="0"/&gt;
+ *         &lt;element name="parentCatalogItemID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentCatalogItemIDProductCatalogType" minOccurs="0"/&gt;
+ *         &lt;element name="parentCatalogItemName" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentCatalogItemNameProductCatalogType" minOccurs="0"/&gt;
+ *         &lt;element name="parentCurrentStatus" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentCurrentStatusProductType" minOccurs="0"/&gt;
+ *         &lt;element name="parentAssignedID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}parentAssignedIDProductType" minOccurs="0"/&gt;
+ *         &lt;element name="planType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}planTypeCatalogSpecificationType" minOccurs="0"/&gt;
+ *         &lt;element name="topRecommended" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}topRecommendedProductType" minOccurs="0"/&gt;
+ *         &lt;element name="productType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productTypeEnumType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="compatibleWithDevice" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}compatibleWithDeviceCatalogSpecificationType" minOccurs="0"/&gt;
+ *         &lt;element name="minNumOfSubscribers" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}minNumOfSubscribersProductType" minOccurs="0"/&gt;
+ *         &lt;element name="numOfSubscribers" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}numOfSubscribersProductType" minOccurs="0"/&gt;
+ *         &lt;element name="sharedPlan" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}sharedPlanPlanType" minOccurs="0"/&gt;
+ *         &lt;element name="isBundle" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}isBundleType" minOccurs="0"/&gt;
+ *         &lt;element name="additionalData" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIKeyValueType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="attachments" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}AttachmentOfferingsType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="planBoList" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PlanBODetailsType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="priceDetails" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PriceDetailsType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="children" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}OfferingTypeOfferType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="productOfferingProductSpecID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productOfferingProductSpecIDType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -595,20 +595,20 @@ public class OfferingTypeOfferType {
     /**
      * Gets the value of the productType property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the productType property.
+     * This is why there is not a <CODE>set</CODE> method for the productType property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getProductType().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProductTypeEnumType }
      * 
@@ -744,20 +744,20 @@ public class OfferingTypeOfferType {
     /**
      * Gets the value of the additionalData property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the additionalData property.
+     * This is why there is not a <CODE>set</CODE> method for the additionalData property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAdditionalData().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link UNIKeyValueType }
      * 
@@ -773,20 +773,20 @@ public class OfferingTypeOfferType {
     /**
      * Gets the value of the attachments property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the attachments property.
+     * This is why there is not a <CODE>set</CODE> method for the attachments property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getAttachments().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AttachmentOfferingsType }
      * 
@@ -802,20 +802,20 @@ public class OfferingTypeOfferType {
     /**
      * Gets the value of the planBoList property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the planBoList property.
+     * This is why there is not a <CODE>set</CODE> method for the planBoList property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPlanBoList().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PlanBODetailsType }
      * 
@@ -831,20 +831,20 @@ public class OfferingTypeOfferType {
     /**
      * Gets the value of the priceDetails property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the priceDetails property.
+     * This is why there is not a <CODE>set</CODE> method for the priceDetails property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPriceDetails().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PriceDetailsType }
      * 
@@ -860,20 +860,20 @@ public class OfferingTypeOfferType {
     /**
      * Gets the value of the children property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the children property.
+     * This is why there is not a <CODE>set</CODE> method for the children property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getChildren().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OfferingTypeOfferType }
      * 

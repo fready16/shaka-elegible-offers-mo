@@ -7,29 +7,30 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Clase Java para productTypeEnumType.
+ * <p>Clase Java para productTypeEnumType.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="productTypeEnumType"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&amp;gt;
- *     &amp;lt;enumeration value="mobile"/&amp;gt;
- *     &amp;lt;enumeration value="landline"/&amp;gt;
- *     &amp;lt;enumeration value="ipTv"/&amp;gt;
- *     &amp;lt;enumeration value="cableTv"/&amp;gt;
- *     &amp;lt;enumeration value="email"/&amp;gt;
- *     &amp;lt;enumeration value="broadband"/&amp;gt;
- *     &amp;lt;enumeration value="bundle"/&amp;gt;
- *     &amp;lt;enumeration value="sva"/&amp;gt;
- *     &amp;lt;enumeration value="sim"/&amp;gt;
- *     &amp;lt;enumeration value="ShEq"/&amp;gt;
- *     &amp;lt;enumeration value="bolton"/&amp;gt;
- *     &amp;lt;enumeration value="dth"/&amp;gt;
- *     &amp;lt;enumeration value="streamingTv"/&amp;gt;
- *     &amp;lt;enumeration value="accessories"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="productTypeEnumType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="mobile"/&gt;
+ *     &lt;enumeration value="landline"/&gt;
+ *     &lt;enumeration value="ipTv"/&gt;
+ *     &lt;enumeration value="cableTv"/&gt;
+ *     &lt;enumeration value="email"/&gt;
+ *     &lt;enumeration value="broadband"/&gt;
+ *     &lt;enumeration value="bundle"/&gt;
+ *     &lt;enumeration value="sva"/&gt;
+ *     &lt;enumeration value="sim"/&gt;
+ *     &lt;enumeration value="ShEq"/&gt;
+ *     &lt;enumeration value="bolton"/&gt;
+ *     &lt;enumeration value="dth"/&gt;
+ *     &lt;enumeration value="streamingTv"/&gt;
+ *     &lt;enumeration value="accessories"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "productTypeEnumType")

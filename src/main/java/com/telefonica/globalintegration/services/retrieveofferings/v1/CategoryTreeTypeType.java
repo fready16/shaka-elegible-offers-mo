@@ -18,24 +18,24 @@ import javax.xml.bind.annotation.XmlType;
  * 					- subcategories: Next level of categories allocated to the component, intended to allow additional segmentation. A product offering may belong to more than one category/subcategory. Synonym for CategoryTreeType (similar concept that SID attribute defined by 'p1:CategoryTreeTypeType')
  * 			
  * 
- * &lt;p&gt;Clase Java para CategoryTreeTypeType complex type.
+ * <p>Clase Java para CategoryTreeTypeType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="CategoryTreeTypeType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="id" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIentityIdType"/&amp;gt;
- *         &amp;lt;element name="href" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}hrefType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="name" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNInameType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="subcategories" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}CategoryTreeTypeType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="CategoryTreeTypeType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="id" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIentityIdType"/&gt;
+ *         &lt;element name="href" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}hrefType" minOccurs="0"/&gt;
+ *         &lt;element name="name" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNInameType" minOccurs="0"/&gt;
+ *         &lt;element name="subcategories" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}CategoryTreeTypeType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

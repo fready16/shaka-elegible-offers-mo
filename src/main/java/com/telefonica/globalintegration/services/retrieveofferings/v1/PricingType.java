@@ -17,23 +17,23 @@ import javax.xml.bind.annotation.XmlType;
  * 					- price: Synonym of MoneyType (similar concept that SID attribute defined by 'p1:UNIMoneyType')
  * 			
  * 
- * &lt;p&gt;Clase Java para PricingType complex type.
+ * <p>Clase Java para PricingType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="PricingType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="technology" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}technologyServiceType"/&amp;gt;
- *         &amp;lt;element name="downloadSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}downloadSpeedProductSpecificationType"/&amp;gt;
- *         &amp;lt;element name="price" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="PricingType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="technology" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}technologyServiceType"/&gt;
+ *         &lt;element name="downloadSpeed" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}downloadSpeedProductSpecificationType"/&gt;
+ *         &lt;element name="price" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

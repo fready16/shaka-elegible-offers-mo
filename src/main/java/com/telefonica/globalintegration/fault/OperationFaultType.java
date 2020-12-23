@@ -11,28 +11,28 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * &lt;p&gt;Clase Java para operationFaultType complex type.
+ * <p>Clase Java para operationFaultType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="operationFaultType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="exceptionCategory" type="{http://telefonica.com/globalIntegration/fault}exceptionCategoryType"/&amp;gt;
- *         &amp;lt;element name="exceptionCode" type="{http://telefonica.com/globalIntegration/fault}exceptionCodeType"/&amp;gt;
- *         &amp;lt;element name="exceptionMessage" type="{http://telefonica.com/globalIntegration/fault}exceptionMessageType"/&amp;gt;
- *         &amp;lt;element name="exceptionDetail" type="{http://telefonica.com/globalIntegration/fault}exceptionDetailType"/&amp;gt;
- *         &amp;lt;element name="exceptionSeverity" type="{http://telefonica.com/globalIntegration/fault}exceptionSeverityType"/&amp;gt;
- *         &amp;lt;element name="exceptionType" type="{http://telefonica.com/globalIntegration/fault}exceptionType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="exceptionProtocol" type="{http://telefonica.com/globalIntegration/fault}exceptionProtocolType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="appDetail" type="{http://telefonica.com/globalIntegration/fault}appDetailType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="operationFaultType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="exceptionCategory" type="{http://telefonica.com/globalIntegration/fault}exceptionCategoryType"/&gt;
+ *         &lt;element name="exceptionCode" type="{http://telefonica.com/globalIntegration/fault}exceptionCodeType"/&gt;
+ *         &lt;element name="exceptionMessage" type="{http://telefonica.com/globalIntegration/fault}exceptionMessageType"/&gt;
+ *         &lt;element name="exceptionDetail" type="{http://telefonica.com/globalIntegration/fault}exceptionDetailType"/&gt;
+ *         &lt;element name="exceptionSeverity" type="{http://telefonica.com/globalIntegration/fault}exceptionSeverityType"/&gt;
+ *         &lt;element name="exceptionType" type="{http://telefonica.com/globalIntegration/fault}exceptionType" minOccurs="0"/&gt;
+ *         &lt;element name="exceptionProtocol" type="{http://telefonica.com/globalIntegration/fault}exceptionProtocolType" minOccurs="0"/&gt;
+ *         &lt;element name="appDetail" type="{http://telefonica.com/globalIntegration/fault}appDetailType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

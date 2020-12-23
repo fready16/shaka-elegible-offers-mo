@@ -8,39 +8,39 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Clase Java para HeaderInType complex type.
+ * <p>Clase Java para HeaderInType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="HeaderInType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="country" type="{http://telefonica.com/globalIntegration/header}countryType"/&amp;gt;
- *         &amp;lt;element name="lang" type="{http://telefonica.com/globalIntegration/header}langType"/&amp;gt;
- *         &amp;lt;element name="entity" type="{http://telefonica.com/globalIntegration/header}entityType"/&amp;gt;
- *         &amp;lt;element name="system" type="{http://telefonica.com/globalIntegration/header}systemType"/&amp;gt;
- *         &amp;lt;element name="subsystem" type="{http://telefonica.com/globalIntegration/header}subsystemType"/&amp;gt;
- *         &amp;lt;element name="originator" type="{http://telefonica.com/globalIntegration/header}originatorType"/&amp;gt;
- *         &amp;lt;element name="sender" type="{http://telefonica.com/globalIntegration/header}senderType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="userId" type="{http://telefonica.com/globalIntegration/header}userIdType"/&amp;gt;
- *         &amp;lt;element name="wsId" type="{http://telefonica.com/globalIntegration/header}wsIdType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="wsIp" type="{http://telefonica.com/globalIntegration/header}wsIpType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="wsIpv6" type="{http://telefonica.com/globalIntegration/header}wsIpv6Type" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="operation" type="{http://telefonica.com/globalIntegration/header}operationType"/&amp;gt;
- *         &amp;lt;element name="destination" type="{http://telefonica.com/globalIntegration/header}destinationType"/&amp;gt;
- *         &amp;lt;element name="pid" type="{http://telefonica.com/globalIntegration/header}pidType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="execId" type="{http://telefonica.com/globalIntegration/header}execIdType"/&amp;gt;
- *         &amp;lt;element name="msgId" type="{http://telefonica.com/globalIntegration/header}msgIdType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="timestamp" type="{http://telefonica.com/globalIntegration/header}timestampType"/&amp;gt;
- *         &amp;lt;element name="msgType" type="{http://telefonica.com/globalIntegration/header}msgTypeType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="varArg" type="{http://telefonica.com/globalIntegration/header}varArgType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="HeaderInType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="country" type="{http://telefonica.com/globalIntegration/header}countryType"/&gt;
+ *         &lt;element name="lang" type="{http://telefonica.com/globalIntegration/header}langType"/&gt;
+ *         &lt;element name="entity" type="{http://telefonica.com/globalIntegration/header}entityType"/&gt;
+ *         &lt;element name="system" type="{http://telefonica.com/globalIntegration/header}systemType"/&gt;
+ *         &lt;element name="subsystem" type="{http://telefonica.com/globalIntegration/header}subsystemType"/&gt;
+ *         &lt;element name="originator" type="{http://telefonica.com/globalIntegration/header}originatorType"/&gt;
+ *         &lt;element name="sender" type="{http://telefonica.com/globalIntegration/header}senderType" minOccurs="0"/&gt;
+ *         &lt;element name="userId" type="{http://telefonica.com/globalIntegration/header}userIdType"/&gt;
+ *         &lt;element name="wsId" type="{http://telefonica.com/globalIntegration/header}wsIdType" minOccurs="0"/&gt;
+ *         &lt;element name="wsIp" type="{http://telefonica.com/globalIntegration/header}wsIpType" minOccurs="0"/&gt;
+ *         &lt;element name="wsIpv6" type="{http://telefonica.com/globalIntegration/header}wsIpv6Type" minOccurs="0"/&gt;
+ *         &lt;element name="operation" type="{http://telefonica.com/globalIntegration/header}operationType"/&gt;
+ *         &lt;element name="destination" type="{http://telefonica.com/globalIntegration/header}destinationType"/&gt;
+ *         &lt;element name="pid" type="{http://telefonica.com/globalIntegration/header}pidType" minOccurs="0"/&gt;
+ *         &lt;element name="execId" type="{http://telefonica.com/globalIntegration/header}execIdType"/&gt;
+ *         &lt;element name="msgId" type="{http://telefonica.com/globalIntegration/header}msgIdType" minOccurs="0"/&gt;
+ *         &lt;element name="timestamp" type="{http://telefonica.com/globalIntegration/header}timestampType"/&gt;
+ *         &lt;element name="msgType" type="{http://telefonica.com/globalIntegration/header}msgTypeType" minOccurs="0"/&gt;
+ *         &lt;element name="varArg" type="{http://telefonica.com/globalIntegration/header}varArgType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

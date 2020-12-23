@@ -24,29 +24,29 @@ import javax.xml.bind.annotation.XmlType;
  * 					- originalTaxAmount: Synonym of MoneyType (similar concept that SID attribute defined by 'p1:UNIMoneyType')
  * 			
  * 
- * &lt;p&gt;Clase Java para PriceDetailsType complex type.
+ * <p>Clase Java para PriceDetailsType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="PriceDetailsType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="priceType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}priceTypeProdAltType"/&amp;gt;
- *         &amp;lt;element name="description" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}descriptionType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="price" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType"/&amp;gt;
- *         &amp;lt;element name="taxAmount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="priceWithTax" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="minPrice" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="maxPrice" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="originalAmount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType"/&amp;gt;
- *         &amp;lt;element name="originalTaxAmount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="PriceDetailsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="priceType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}priceTypeProdAltType"/&gt;
+ *         &lt;element name="description" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}descriptionType" minOccurs="0"/&gt;
+ *         &lt;element name="price" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType"/&gt;
+ *         &lt;element name="taxAmount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&gt;
+ *         &lt;element name="priceWithTax" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&gt;
+ *         &lt;element name="minPrice" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&gt;
+ *         &lt;element name="maxPrice" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&gt;
+ *         &lt;element name="originalAmount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType"/&gt;
+ *         &lt;element name="originalTaxAmount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIMoneyType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

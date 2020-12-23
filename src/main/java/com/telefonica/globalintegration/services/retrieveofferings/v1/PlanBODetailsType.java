@@ -22,29 +22,29 @@ import javax.xml.bind.annotation.XmlType;
  * 					- planInfo: Synonym of KeyValueType (similar concept that SID attribute defined by 'p1:UNIKeyValueType')
  * 			
  * 
- * &lt;p&gt;Clase Java para PlanBODetailsType complex type.
+ * <p>Clase Java para PlanBODetailsType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="PlanBODetailsType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="billingOfferId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}billingOfferIdProductOfferingType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="billingOfferCode" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}billingOfferCodeProductOfferingType"/&amp;gt;
- *         &amp;lt;element name="billingOfferName" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}catalogNameCatalogSpecificationType"/&amp;gt;
- *         &amp;lt;element name="priceDetails" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PriceDetailsType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="priceList" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PricingType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="planInfo" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIKeyValueType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="productSpecContainmentID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productSpecContainmentIDType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="pricePlanSpecContainmentID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pricePlanSpecContainmentIDType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="image" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}imageType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="PlanBODetailsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="billingOfferId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}billingOfferIdProductOfferingType" minOccurs="0"/&gt;
+ *         &lt;element name="billingOfferCode" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}billingOfferCodeProductOfferingType"/&gt;
+ *         &lt;element name="billingOfferName" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}catalogNameCatalogSpecificationType"/&gt;
+ *         &lt;element name="priceDetails" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PriceDetailsType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="priceList" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}PricingType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="planInfo" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIKeyValueType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="productSpecContainmentID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productSpecContainmentIDType" minOccurs="0"/&gt;
+ *         &lt;element name="pricePlanSpecContainmentID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pricePlanSpecContainmentIDType" minOccurs="0"/&gt;
+ *         &lt;element name="image" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}imageType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -149,20 +149,20 @@ public class PlanBODetailsType {
     /**
      * Gets the value of the priceDetails property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the priceDetails property.
+     * This is why there is not a <CODE>set</CODE> method for the priceDetails property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPriceDetails().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PriceDetailsType }
      * 
@@ -178,20 +178,20 @@ public class PlanBODetailsType {
     /**
      * Gets the value of the priceList property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the priceList property.
+     * This is why there is not a <CODE>set</CODE> method for the priceList property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPriceList().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PricingType }
      * 
@@ -207,20 +207,20 @@ public class PlanBODetailsType {
     /**
      * Gets the value of the planInfo property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the planInfo property.
+     * This is why there is not a <CODE>set</CODE> method for the planInfo property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getPlanInfo().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link UNIKeyValueType }
      * 

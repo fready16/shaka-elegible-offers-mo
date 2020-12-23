@@ -7,19 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Clase Java para priceTypeProdAltType.
+ * <p>Clase Java para priceTypeProdAltType.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="priceTypeProdAltType"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&amp;gt;
- *     &amp;lt;enumeration value="recurring discount"/&amp;gt;
- *     &amp;lt;enumeration value="one time discount"/&amp;gt;
- *     &amp;lt;enumeration value="recurring allowance"/&amp;gt;
- *     &amp;lt;enumeration value="one time allowance"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="priceTypeProdAltType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="recurring discount"/&gt;
+ *     &lt;enumeration value="one time discount"/&gt;
+ *     &lt;enumeration value="recurring allowance"/&gt;
+ *     &lt;enumeration value="one time allowance"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "priceTypeProdAltType")

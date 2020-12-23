@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the com.telefonica.globalintegration.fault package. 
- * &lt;p&gt;An ObjectFactory allows you to programatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -82,12 +82,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OperationFaultType }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OperationFaultType }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link OperationFaultType }{@code >}
      */
     @XmlElementDecl(namespace = "http://telefonica.com/globalIntegration/fault", name = "MessageFault")
     public JAXBElement<OperationFaultType> createMessageFault(OperationFaultType value) {

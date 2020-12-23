@@ -19,24 +19,24 @@ import javax.xml.bind.annotation.XmlType;
  * 					- maxResultCount: Field maxResultCount
  * 			
  * 
- * &lt;p&gt;Clase Java para PagingInfoType complex type.
+ * <p>Clase Java para PagingInfoType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="PagingInfoType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="pageSize" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pageSizeIntegerValueType"/&amp;gt;
- *         &amp;lt;element name="pageCount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pageCountIntegerValueType"/&amp;gt;
- *         &amp;lt;element name="pageNumber" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pageNumberIntegerValueType"/&amp;gt;
- *         &amp;lt;element name="maxResultCount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxResultCountIntegerValueType"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="PagingInfoType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="pageSize" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pageSizeIntegerValueType"/&gt;
+ *         &lt;element name="pageCount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pageCountIntegerValueType"/&gt;
+ *         &lt;element name="pageNumber" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}pageNumberIntegerValueType"/&gt;
+ *         &lt;element name="maxResultCount" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}maxResultCountIntegerValueType"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

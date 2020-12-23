@@ -16,22 +16,22 @@ import javax.xml.bind.annotation.XmlType;
  * 					- value: Value in a metadata pair
  * 			
  * 
- * &lt;p&gt;Clase Java para UNIKeyValueType complex type.
+ * <p>Clase Java para UNIKeyValueType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="UNIKeyValueType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="key" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIkeyType"/&amp;gt;
- *         &amp;lt;element name="value" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIvalueType"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="UNIKeyValueType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="key" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIkeyType"/&gt;
+ *         &lt;element name="value" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}UNIvalueType"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

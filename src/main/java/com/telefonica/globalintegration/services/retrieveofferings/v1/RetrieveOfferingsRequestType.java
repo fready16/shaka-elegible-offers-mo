@@ -25,29 +25,29 @@ import javax.xml.bind.annotation.XmlType;
  * 					- filterInfo: Synonym of FilterInfo (similar concept that SID attribute defined by 'p1:FilterInfoType')
  * 			
  * 
- * &lt;p&gt;Clase Java para retrieveOfferingsRequestType complex type.
+ * <p>Clase Java para retrieveOfferingsRequestType complex type.
  * 
- * &lt;p&gt;El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="retrieveOfferingsRequestType"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="customerId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}customerIdCustomerType"/&amp;gt;
- *         &amp;lt;element name="productType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productTypeEnumType" maxOccurs="unbounded"/&amp;gt;
- *         &amp;lt;element name="category" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}CategoryTreeTypeType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="channel.id" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}channel.idType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="product.id" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}product.idType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="productOrderId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productOrderIdProductType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="catalogID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}catalogIDProductCatalogType" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="productOfferingCatalogId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productOfferingCatalogIdsProductOfferingType" maxOccurs="unbounded" minOccurs="0"/&amp;gt;
- *         &amp;lt;element name="filterInfo" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}FilterInfoType" minOccurs="0"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="retrieveOfferingsRequestType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="customerId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}customerIdCustomerType"/&gt;
+ *         &lt;element name="productType" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productTypeEnumType" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="category" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}CategoryTreeTypeType" minOccurs="0"/&gt;
+ *         &lt;element name="channel.id" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}channel.idType" minOccurs="0"/&gt;
+ *         &lt;element name="product.id" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}product.idType" minOccurs="0"/&gt;
+ *         &lt;element name="productOrderId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productOrderIdProductType" minOccurs="0"/&gt;
+ *         &lt;element name="catalogID" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}catalogIDProductCatalogType" minOccurs="0"/&gt;
+ *         &lt;element name="productOfferingCatalogId" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}productOfferingCatalogIdsProductOfferingType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="filterInfo" type="{http://telefonica.com/globalIntegration/services/retrieveOfferings/v1}FilterInfoType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */
@@ -107,20 +107,20 @@ public class RetrieveOfferingsRequestType {
     /**
      * Gets the value of the productType property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the productType property.
+     * This is why there is not a <CODE>set</CODE> method for the productType property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getProductType().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProductTypeEnumType }
      * 
@@ -256,20 +256,20 @@ public class RetrieveOfferingsRequestType {
     /**
      * Gets the value of the productOfferingCatalogId property.
      * 
-     * &lt;p&gt;
+     * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the productOfferingCatalogId property.
+     * This is why there is not a <CODE>set</CODE> method for the productOfferingCatalogId property.
      * 
-     * &lt;p&gt;
+     * <p>
      * For example, to add a new item, do as follows:
-     * &lt;pre&gt;
+     * <pre>
      *    getProductOfferingCatalogId().add(newItem);
-     * &lt;/pre&gt;
+     * </pre>
      * 
      * 
-     * &lt;p&gt;
+     * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
      * 
