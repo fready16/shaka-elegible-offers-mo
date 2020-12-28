@@ -85,6 +85,7 @@ public class Constant {
 	public static final String DEV_ENVIRONMENT	      = "dev";
 	public static final String EXCEPTION_WAS_THROWN   = "-> An exception was thrown by method: ";
 	public static final String DATE_TIME = "dd/MM/yy ' ' HH:mm:ss";
+	public static final String TIME = "HH:mm:ss";
 	    
 	private Constant () {
 	    

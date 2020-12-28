@@ -2,6 +2,7 @@ package com.telefonica.eom.commons;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -153,5 +154,10 @@ public class Util {
      */
     public static String getDateTimeFormatter() {
         return DATETIME_FORMATTER.format(LocalDateTime.now());
+    }
+    
+    public static String getDateFormat(Date date, String exp) {
+	SimpleDateFormat sdf = new SimpleDateFormat(exp);
+	return sdf.format(date);
     }
 }
